@@ -1735,8 +1735,44 @@ function FeesGuide() {
         {/* SECTION 14 — author */}
 
         <Section id="author">
-          <H2>About the Author</H2>
+          <H2>About the Author — Experience, Expertise &amp; Accountability</H2>
           <AuthorProfile />
+
+          <H3>What I did, personally, to produce this guide</H3>
+          <ol>
+            <li>
+              Opened the public pricing page, fee brochure or enquiry flow of every programme
+              discussed, recorded the exact figure and the date, and re-opened it before republishing.
+            </li>
+            <li>
+              Read each syllabus module by module rather than by its headline, checking whether Python
+              and mathematics precede modelling and whether retrieval, fine-tuning, agents and
+              deployment exist as their own modules.
+            </li>
+            <li>
+              Read the fine print that decides real cost: tax treatment, instalment structure,
+              lender and interest, refund cut-off, deferral and transfer rules.
+            </li>
+            <li>
+              Recorded every learner claim against where it was published, and left placement
+              percentages out entirely unless a denominator and a batch date came with them.
+            </li>
+            <li>
+              Left a visible bracketed gap wherever the answer required a sales call — because a
+              plausible-looking number is more dangerous to you than an obvious blank.
+            </li>
+          </ol>
+
+          <H3>What I am qualified to say, and what I am not</H3>
+          <p>
+            I can tell you what a published fee includes, how a fee band behaves, how a syllabus
+            reads against the 2026 stack, and which terms in a contract change your total cost. I
+            cannot tell you what salary you will earn, whether a specific programme will place you,
+            or what a course is like to sit through week after week — those belong to the learners
+            who did it and to the reviewers below, and where this page carries such a claim it is
+            attributed to its source rather than to me.
+          </p>
+
           <H3>Methodology and correction policy</H3>
           <p>
             The publication method for this guide is to collect fees from public pricing pages or
@@ -1746,16 +1782,27 @@ function FeesGuide() {
             scenarios are labelled illustrative and are not predictions.
           </p>
           <p className="text-sm text-muted-foreground">
-            Corrections: [INSERT: contact email]. Fees, programs and offers change frequently; re-check
-            every figure before publication and on the quarterly review cycle.
+            Corrections: [INSERT: contact email]. If any figure here is out of date or wrong, write in
+            and it will be changed with the correction noted. Fees, programmes and offers change
+            frequently; every figure is re-checked before publication and on the quarterly review
+            cycle.
           </p>
         </Section>
 
         {/* SECTION 15 — reviewers */}
         <Section id="expert-reviewers">
-          <H2>Expert Reviewers</H2>
+          <H2>Expert Reviewers — Who Checked This, and Against What</H2>
+          <p>
+            I do not review my own conclusions on hiring, lending or curriculum. Four specialists hold
+            review slots on the sections closest to their day-to-day work: an applied-AI hiring
+            manager on career scope, an education-lending specialist on EMI and refunds, a completed
+            career switcher on the ROI scenarios, and a curriculum designer on syllabus scope. Names,
+            employers, biographies and quotes stay blank until each reviewer has confirmed their
+            review and given permission to publish — an unnamed expert is not evidence.
+          </p>
           <ReviewerCarousel />
         </Section>
+
 
         {/* SECTION 16 — FAQs */}
         <Section id="faqs">
