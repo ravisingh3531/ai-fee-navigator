@@ -2,9 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import heroImage from "@/assets/fee-spectrum-hero.jpg";
 import { Callout, Faq, H2, H3, Note, Section, TableBlock } from "@/components/article";
+import { CourseRecommendationQuiz } from "@/components/course-recommendation-quiz";
 import { FeeDecisionFramework } from "@/components/fee-decision-framework";
+import { FeeRoiCalculator } from "@/components/fee-roi-calculator";
 import { AuthorProfile, ReviewerCarousel } from "@/components/trust-sections";
 import { faqGroups } from "@/content/faqs";
+import { masterComparison } from "@/content/master-comparison";
+
 import {
   LAST_UPDATED,
   feeSpectrum,
@@ -96,17 +100,23 @@ const toc = [
   ["by-type-level", "Fees by Course Type & Learning Level"],
   ["online-offline", "Online vs Offline AI Course Fees"],
   ["duration-eligibility", "Duration & Eligibility in India (2026)"],
+  ["master-table", "Master Comparison Table — Fees to Value for Money"],
   ["detailed-comparison", "Detailed Course-by-Course Comparison"],
   ["logicmojo", "LogicMojo AI & ML Course — Fee & Career Value"],
+  ["recommendation", "My Research-Backed Recommendation for Beginners"],
   ["inclusions", "What Is Included in AI Course Fees?"],
   ["career-scope", "AI Career Scope & Salary After an AI Course"],
   ["roi", "ROI & Value for Money"],
+  ["calculator", "AI Course Fee & ROI Calculator"],
+  ["course-quiz", "AI Course Recommendation Quiz"],
   ["checklist", "How to Choose an AI Course — Fee-First Framework"],
+  ["methodology", "Research & Selection Methodology"],
   ["author", "About the Author"],
   ["expert-reviewers", "Expert Reviewers"],
   ["faqs", "36 FAQs on AI Course Fees"],
   ["final-guide", "Final Decision Guide"],
 ] as const;
+
 
 type Program = {
   name: string;
@@ -916,7 +926,41 @@ function FeesGuide() {
           </p>
         </Section>
 
+        {/* SECTION 7B — master comparison */}
+        <Section id="master-table">
+          <H2>Master Comparison Table — Fees, Duration, Eligibility, Curriculum, Mentorship, Placement &amp; Value for Money</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            One table, eleven columns, thirteen representative options across every fee band. Read it
+            left to right as a single question: for this fee, what teaching, feedback and career
+            support am I actually buying?
+          </p>
+          <Callout label="How to read the labels">
+            <strong>Verified</strong> means the figure is published on the provider&apos;s own public
+            page and was re-checked for this guide. <strong>Provider-reported</strong> means the
+            provider states it and this guide has not independently confirmed it — treat it as a claim,
+            not a fact. <strong>[VERIFY]</strong> means the detail is not publicly published; ask for it
+            in writing before you pay. No fee, salary, placement percentage or student outcome on this
+            page is estimated or invented.
+          </Callout>
+          <TableBlock
+            number="Master table"
+            title="AI course fees vs. what the fee buys (2026)"
+            note="Ordered by fee band ascending. Order implies nothing about quality."
+            headers={masterComparison.headers}
+            rows={masterComparison.rows}
+            highlightMatch="LogicMojo"
+            caption="Value-for-money is a judgement about cost per unit of capability or credential, not a rating of teaching quality."
+          />
+          <Note>
+            Two columns decide most regrets: <strong>mentorship</strong> and{" "}
+            <strong>placement support</strong>. Free and recorded courses score zero on both by
+            design — which is fine if you can supply structure and feedback yourself, and expensive
+            if you cannot.
+          </Note>
+        </Section>
+
         {/* SECTION 8 */}
+
         <Section id="detailed-comparison">
           <H2>Detailed AI Course Comparison — Fees, Duration, Eligibility, Curriculum &amp; Career Value</H2>
           <p>
@@ -1119,7 +1163,124 @@ function FeesGuide() {
           </div>
         </Section>
 
+        {/* SECTION 9B — recommendation */}
+        <Section id="recommendation">
+          <H2>My Experience-Based Solution: My Research-Backed Recommendation</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            After working through every fee band on this page, one recommendation follows for a
+            specific reader: <strong>if you are a beginner who wants a structured path into AI, ML
+            and Generative AI with placement support, the LogicMojo AI &amp; ML Course is the
+            best-fit option among the programmes evaluated here.</strong> That is a fit judgement
+            against the criteria below, not a claim that it is the best course in India, and not a
+            promise about your outcome.
+          </p>
+          <Callout label="Disclosure and evidence standard">
+            LogicMojo publishes this guide, so hold this section to a higher bar than the rest of it.
+            Every factual claim below is either a fee published on the LogicMojo course page
+            (<strong>Verified</strong>), a claim LogicMojo makes that you should confirm
+            (<strong>provider-reported</strong>), or an explicit <strong>[VERIFY]</strong> gap. There
+            are no invented placement percentages, salary figures, hiring-partner lists, testimonials
+            or personal anecdotes anywhere in this recommendation.
+          </Callout>
+
+          <H3>1. Course fee and value for money</H3>
+          <p>
+            <strong>Verified:</strong> ₹87,000, with a 15% discount for the first 15 enrolments that
+            brings it to ₹73,950 — published on the LogicMojo course page. Tax treatment, EMI terms
+            and refund policy are <strong>[VERIFY]</strong>.
+          </p>
+          <p>
+            The value argument is structural rather than promotional. Comparable live, mentor-led
+            AI/ML programmes with career support commonly sit in the ₹1,50,000–₹3,50,000 university-
+            affiliated band or the ₹2,50,000–₹4,00,000 placement-infrastructure band, as the master
+            table shows. LogicMojo sits in the ₹40,000–₹1,20,000 specialist band while still offering
+            live teaching, mentorship, projects and interview preparation. For a beginner buying
+            capability rather than a university line on a CV, that is where cost per unit of
+            capability tends to be lowest. If what you actually need is a branded credential for an
+            HR filter, a premium-band programme is the more rational purchase — say so to yourself
+            before you pay.
+          </p>
+
+          <H3>2. Placement support and available track record</H3>
+          <p>
+            <strong>Provider-reported:</strong> interview preparation, resume and career guidance, and
+            job assistance. This is <em>assistance</em>, not a placement guarantee, and this guide
+            makes no guarantee either. Published learner stories are available at{" "}
+            <a href="https://logicmojo.com/success-story" rel="sponsored" className="font-semibold text-primary underline">
+              logicmojo.com/success-story
+            </a>{" "}
+            — read them as provider-published testimonials, which is what they are. This guide has not
+            independently audited them, and quotes none of them as proof.
+          </p>
+          <p>
+            What to do with that: ask for the placement-support scope item by item in writing, ask how
+            many learners in the two most recent completed batches used it, and ask to speak to two
+            recent alumni you did not pick from a curated page. A provider willing to answer those
+            three questions is giving you far better evidence than any percentage on a landing page.
+            Any programme that shows you a placement number without a denominator has told you nothing.
+          </p>
+
+          <H3>3. Beginner-friendly, step-by-step curriculum</H3>
+          <p>
+            <strong>Provider-reported [VERIFY current syllabus]:</strong> the sequence starts with
+            prerequisite onboarding — Python and the mathematics intuition a beginner needs — before
+            machine learning begins. That ordering is the single most important feature for a
+            beginner. Most abandoned AI courses are abandoned in week three, when a syllabus that
+            assumed Python and basic statistics leaves a non-tech learner behind with no way back in.
+          </p>
+          <TableBlock
+            number="Recommendation table"
+            title="LogicMojo learning path as published (provider-reported — verify the current syllabus)"
+            headers={["Stage", "What it covers", "Why a beginner needs it"]}
+            rows={[
+              ["Foundations", "Python programming, statistics and probability intuition", "Removes the week-three cliff that ends most self-paced attempts"],
+              ["Machine learning", "Supervised and unsupervised models, evaluation, feature work", "The vocabulary and judgement every AI interview tests"],
+              ["Deep learning", "Neural networks, training dynamics, computer vision basics", "Required before NLP and Transformers make sense"],
+              ["NLP & Transformers", "Text processing, embeddings, attention, Transformer architecture", "The foundation the entire GenAI stack is built on"],
+              ["Generative AI", "Prompt engineering, LLMs, RAG, LangChain, vector databases, fine-tuning, AI agents", "The stack Indian AI hiring is actually asking for in 2026"],
+              ["Projects & career", "Real-world projects, interview preparation, resume and career guidance", "Converts study into something a hiring manager can assess"],
+            ]}
+            caption="Module names follow LogicMojo's published course page. Confirm the current list, project briefs and batch duration before enrolling."
+          />
+
+          <H3>4. Generative AI depth, not GenAI decoration</H3>
+          <p>
+            The distinguishing test for any 2026 AI syllabus is whether GenAI is a module or a
+            marketing line. Prompt engineering alone is a marketing line. A syllabus that names{" "}
+            <strong>RAG, LangChain, vector databases, fine-tuning and agents</strong> is describing
+            the work that AI engineering roles are hired for — retrieval pipelines, evaluation, and
+            agents that call tools. LogicMojo&apos;s page names all of these
+            (<strong>provider-reported</strong>). Ask for the project briefs: a RAG project with a
+            real document set and an evaluation step is evidence, and a chatbot demo is not.
+          </p>
+
+          <H3>5. Real projects, interview preparation and career guidance</H3>
+          <p>
+            <strong>Provider-reported [VERIFY count and briefs]:</strong> real-world projects,
+            interview preparation, resume and career guidance, and job assistance. For a beginner
+            these matter more than any extra module, because a portfolio you can defend in an
+            interview is the only artefact that transfers. Ask two questions before paying: does a
+            human review your code, and can you keep and publish the projects afterwards.
+          </p>
+
+          <H3>Where I would not recommend it</H3>
+          <p>
+            This recommendation is bounded, which is what makes it useful. Choose something else if
+            your budget is zero — the free stack in the master table is the honest answer. Choose a
+            university-affiliated programme if a recognised credential for a promotion or HR filter
+            is the real requirement. Choose a placement-infrastructure bootcamp if you have the time
+            and budget for eleven-plus months and placement machinery is your priority. And choose
+            short vendor certifications if you only want AI literacy in your current role.
+          </p>
+          <Note>
+            Whatever you choose, the last step is identical: get fee, tax, EMI, duration, syllabus,
+            mentorship level, placement-support scope and refund policy confirmed in writing. A
+            recommendation is a starting point for that conversation, never a substitute for it.
+          </Note>
+        </Section>
+
         {/* SECTION 10 */}
+
         <Section id="inclusions">
           <H2>What Is Included in AI Course Fees? (And What Isn&apos;t)</H2>
           <p>
@@ -1371,7 +1532,35 @@ function FeesGuide() {
           </Note>
         </Section>
 
+        {/* SECTION 12B — calculator */}
+        <Section id="calculator">
+          <H2>AI Course Fee &amp; ROI Calculator</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            Enter your own four numbers — fee, duration, current salary and the salary you are
+            targeting — and see the total investment, break-even point and three-year net position.
+            Everything is arithmetic on your inputs. Nothing here predicts a hike or an offer.
+          </p>
+          <FeeRoiCalculator />
+          <p className="mt-4 text-sm text-muted-foreground">
+            Use a target salary you have actually seen in current job posts for the role you want, not
+            an aspirational figure. Then divide the result by your honest chance of finishing.
+          </p>
+        </Section>
+
+        {/* SECTION 12C — quiz */}
+        <Section id="course-quiz">
+          <H2>AI Course Recommendation Quiz</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            Eight questions about your experience, background, goal, budget, placement needs,
+            preferred mode, weekly time and whether you need Python and ML foundations built from
+            scratch. The result appears in a pop-up with the fee, duration, why it fits, key modules
+            and placement support.
+          </p>
+          <CourseRecommendationQuiz />
+        </Section>
+
         {/* SECTION 13 — fee-first framework */}
+
         <Section id="checklist">
           <H2>How to Choose an AI Course in 2026 — Fee-First Decision Framework</H2>
           <p className="max-w-4xl text-lg leading-relaxed">
@@ -1382,7 +1571,56 @@ function FeesGuide() {
           <FeeDecisionFramework />
         </Section>
 
+        {/* SECTION 13B — methodology */}
+        <Section id="methodology">
+          <H2>Research &amp; Selection Methodology</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            Every programme on this page was assessed against the same twelve criteria, and no
+            criterion produced a score that ranks providers against each other. The purpose is to show
+            what a fee buys, so you can match it to what you need.
+          </p>
+          <TableBlock
+            number="Methodology table"
+            title="The twelve evaluation criteria"
+            headers={["Criterion", "What was checked", "Evidence standard applied"]}
+            rows={[
+              ["Fees / value for money", "Published fee, tax treatment, EMI, refund window", "Provider's own pricing page; unpublished figures marked [VERIFY]"],
+              ["Beginner-friendliness", "Whether Python and maths foundations precede ML", "Published syllabus order"],
+              ["Duration", "Stated months and expected weekly hours", "Published figures; otherwise [VERIFY]"],
+              ["Curriculum depth", "ML, DL, NLP coverage and last-updated signals", "Public syllabus only"],
+              ["GenAI relevance", "Presence of RAG, LangChain, vector DBs, fine-tuning, agents", "Named modules, not marketing copy"],
+              ["Projects", "Number, briefs, and whether work is portfolio-usable", "Published briefs; otherwise [VERIFY]"],
+              ["Mentorship", "Live teaching, doubt-resolution, human code review", "Published claims labelled provider-reported"],
+              ["Placement support", "Scope of assistance versus any guarantee language", "Claims recorded as claims; no percentage repeated without a denominator"],
+              ["Student outcomes / reviews", "Publicly available learner accounts and discussion", "Treated as testimony, never as a statistic"],
+              ["Instructor credentials", "Whether a named instructor is published for a batch", "Public pages; otherwise [VERIFY]"],
+              ["Hiring network", "Whether partner claims are specific and checkable", "Unverifiable partner logos not repeated as fact"],
+              ["Career support", "Resume, mock interviews, referrals, post-course access", "Published inclusions only"],
+            ]}
+          />
+
+          <H3>How information was cross-checked</H3>
+          <ul className="source-list">
+            <li>Official course and pricing pages, as the only source used for any fee figure quoted as verified.</li>
+            <li>LinkedIn alumni profiles, to see what roles graduates actually list — read as directional signal, never counted into a placement rate.</li>
+            <li>Reddit and Quora threads, used to identify recurring complaints worth asking a provider about, not as evidence of quality.</li>
+            <li>Review platforms, read for patterns rather than scores, since incentivised reviews are common on both sides.</li>
+            <li>YouTube walkthroughs and syllabus reviews, where they show real course material rather than affiliate promotion.</li>
+          </ul>
+
+          <H3>What this methodology deliberately refuses to do</H3>
+          <p>
+            It does not estimate a fee that a provider has not published, publish a salary figure
+            without a named source, repeat a placement percentage without a denominator and a batch
+            date, invent a testimonial or a student outcome, or rank providers first-to-last. Where a
+            detail could not be confirmed, the page shows a visible placeholder instead of a
+            plausible-looking number. Fees, offers and syllabi change frequently, so every figure is
+            re-verified quarterly and carries a verification date.
+          </p>
+        </Section>
+
         {/* SECTION 14 — author */}
+
         <Section id="author">
           <H2>About the Author</H2>
           <AuthorProfile />
