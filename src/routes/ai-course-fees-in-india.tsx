@@ -455,6 +455,9 @@ function FeesGuide() {
           className="mt-10 aspect-[16/8] w-full rounded-lg border border-border object-cover shadow-lift"
         />
 
+        <EeatPanel lastUpdated={LAST_UPDATED} />
+
+
         <p className="mt-8">
           I have spent the past several weeks doing something no course landing page will do for
           you: putting the fee sheets side by side. Free university content, ₹1,500 recorded
