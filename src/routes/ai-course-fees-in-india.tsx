@@ -7,7 +7,6 @@ import { AuthorProfile, ReviewerCarousel } from "@/components/trust-sections";
 import { faqGroups } from "@/content/faqs";
 import {
   LAST_UPDATED,
-  checklist,
   feeSpectrum,
   table1,
   table10,
@@ -54,7 +53,7 @@ export const Route = createFileRoute("/ai-course-fees-in-india")({
       "@context": "https://schema.org",
       "@type": "Course",
       name: "LogicMojo AI & ML Course",
-      description: "A live online AI and machine learning course. Curriculum, duration, inclusions and batch details require verification on the current course page.",
+      description: "LogicMojo AI and machine learning course. Curriculum, duration, format, inclusions and batch details require verification on the current course page.",
       provider: { "@type": "Organization", name: "LogicMojo", sameAs: "https://logicmojo.com" },
       offers: {
         "@type": "Offer",
