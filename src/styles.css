@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system: "Ledger" — editorial finance-guide aesthetic.
- * Warm paper background, deep ink text, teal accent, amber highlight.
+ * Design system: "Azure Editorial" — modern education-market report.
+ * Bright white surfaces, deep navy ink and a clear research-blue accent.
  * All colors are oklch semantic tokens. Never hardcode colors in components.
  */
 
@@ -46,29 +46,29 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.982 0.008 85);
-  --foreground: oklch(0.215 0.021 250);
+  --background: oklch(0.985 0.004 240);
+  --foreground: oklch(0.26 0.045 245);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.215 0.021 250);
+  --card-foreground: oklch(0.26 0.045 245);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.215 0.021 250);
-  --primary: oklch(0.44 0.09 195);
-  --primary-foreground: oklch(0.99 0.005 190);
-  --secondary: oklch(0.945 0.014 95);
-  --secondary-foreground: oklch(0.3 0.03 250);
-  --muted: oklch(0.955 0.01 90);
-  --muted-foreground: oklch(0.5 0.02 250);
-  --accent: oklch(0.93 0.035 190);
-  --accent-foreground: oklch(0.3 0.05 200);
-  --highlight: oklch(0.85 0.13 85);
-  --highlight-foreground: oklch(0.28 0.05 70);
+  --popover-foreground: oklch(0.26 0.045 245);
+  --primary: oklch(0.55 0.16 245);
+  --primary-foreground: oklch(0.99 0.004 240);
+  --secondary: oklch(0.965 0.018 240);
+  --secondary-foreground: oklch(0.3 0.05 245);
+  --muted: oklch(0.965 0.012 240);
+  --muted-foreground: oklch(0.5 0.035 245);
+  --accent: oklch(0.95 0.03 240);
+  --accent-foreground: oklch(0.32 0.08 245);
+  --highlight: oklch(0.87 0.08 230);
+  --highlight-foreground: oklch(0.28 0.07 245);
   --destructive: oklch(0.55 0.19 27);
   --destructive-foreground: oklch(0.99 0.003 250);
-  --border: oklch(0.9 0.014 90);
-  --input: oklch(0.9 0.014 90);
-  --ring: oklch(0.44 0.09 195);
-  --shadow-panel: 0 1px 0 0 oklch(0.44 0.09 195 / 8%), 0 8px 24px -16px oklch(0.3 0.04 250 / 25%);
-  --shadow-lift: 0 18px 40px -24px oklch(0.3 0.04 250 / 35%);
+  --border: oklch(0.9 0.025 240);
+  --input: oklch(0.9 0.025 240);
+  --ring: oklch(0.55 0.16 245);
+  --shadow-panel: 0 1px 2px oklch(0.3 0.05 245 / 6%), 0 10px 30px -20px oklch(0.4 0.1 245 / 25%);
+  --shadow-lift: 0 24px 55px -28px oklch(0.35 0.12 245 / 34%);
 }
 
 .dark {
@@ -112,7 +112,7 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     text-wrap: balance;
   }
 }
@@ -147,4 +147,52 @@
   & strong {
     font-weight: 700;
   }
+}
+
+@keyframes editorial-reveal {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-fade-in {
+  animation: editorial-reveal 700ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+@utility section-reveal {
+  animation: editorial-reveal 700ms cubic-bezier(.2,.8,.2,1) both;
+  animation-timeline: view();
+  animation-range: entry 8% cover 24%;
+}
+
+@utility program-card {
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+  &:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in oklab, var(--primary) 35%, var(--border));
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+@utility quick-answer {
+  background-image:
+    linear-gradient(120deg, color-mix(in oklab, var(--primary) 90%, var(--foreground)), var(--primary));
+  position: relative;
+  &::after {
+    content: "₹";
+    position: absolute;
+    inset-inline-end: 1.5rem;
+    inset-block-start: -2.5rem;
+    color: color-mix(in oklab, var(--primary-foreground) 9%, transparent);
+    font-family: var(--font-display);
+    font-size: 12rem;
+    font-weight: 700;
+    line-height: 1;
+    pointer-events: none;
+  }
+  & > * { position: relative; z-index: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in, .section-reveal { animation: none; }
+  .program-card { transition: none; }
 }
