@@ -190,6 +190,10 @@
     pointer-events: none;
   }
   & > * { position: relative; z-index: 1; }
+  & p,
+  & strong {
+    color: var(--primary-foreground);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
