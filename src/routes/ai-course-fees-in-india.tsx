@@ -96,17 +96,23 @@ const toc = [
   ["by-type-level", "Fees by Course Type & Learning Level"],
   ["online-offline", "Online vs Offline AI Course Fees"],
   ["duration-eligibility", "Duration & Eligibility in India (2026)"],
+  ["master-table", "Master Comparison Table — Fees to Value for Money"],
   ["detailed-comparison", "Detailed Course-by-Course Comparison"],
   ["logicmojo", "LogicMojo AI & ML Course — Fee & Career Value"],
+  ["recommendation", "My Research-Backed Recommendation for Beginners"],
   ["inclusions", "What Is Included in AI Course Fees?"],
   ["career-scope", "AI Career Scope & Salary After an AI Course"],
   ["roi", "ROI & Value for Money"],
+  ["calculator", "AI Course Fee & ROI Calculator"],
+  ["course-quiz", "AI Course Recommendation Quiz"],
   ["checklist", "How to Choose an AI Course — Fee-First Framework"],
+  ["methodology", "Research & Selection Methodology"],
   ["author", "About the Author"],
   ["expert-reviewers", "Expert Reviewers"],
   ["faqs", "36 FAQs on AI Course Fees"],
   ["final-guide", "Final Decision Guide"],
 ] as const;
+
 
 type Program = {
   name: string;
