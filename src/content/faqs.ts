@@ -1,204 +1,52 @@
-export const faqGroups: { theme: string; items: { q: string; a: string }[] }[] = [
-  {
-    theme: "Fees and pricing",
-    items: [
-      {
-        q: "How much does an AI course cost in India in 2026?",
-        a: "From ₹0 for NPTEL, SWAYAM, fast.ai, Hugging Face and MOOC audits, to ₹5,00,000+ for IIT/IIM/IISc executive programs and premium placement bootcamps. Most structured, job-oriented AI/ML programs sit between ₹50,000 and ₹2,50,000. Short certifications run ₹3,000–₹40,000.",
-      },
-      {
-        q: "What is the fee for an AI ML course in India?",
-        a: "A combined AI and machine learning program that takes you from Python to deployment typically costs ₹40,000–₹2,50,000 depending on whether a university credential and a placement team are attached. As a reference point on this page, the LogicMojo AI & ML Course is priced at ₹87,000, or ₹73,950 under the 15% discount for the first 15 enrolments.",
-      },
-      {
-        q: "Why does one AI course cost ₹5,000 and another ₹4,00,000 with a similar syllabus?",
-        a: "Syllabus text is the cheapest part of a program. The price gap is driven by live instructor hours, human code review, credential licensing with a university, placement operations and marketing spend. When two similar syllabi differ by ₹1L or more, the gap is almost always credential, placement operations or sales cost.",
-      },
-      {
-        q: "Which is the cheapest AI course in India?",
-        a: "The cheapest credible option is free: NPTEL and SWAYAM AI/ML courses, fast.ai, Hugging Face courses and Kaggle Learn. The cheapest paid structured options are Udemy courses at a few hundred to a few thousand rupees. The cheapest option with cohort structure and some support sits in the ₹5,000–₹40,000 band.",
-      },
-      {
-        q: "Are expensive AI courses worth it?",
-        a: "They are worth it when you specifically need what the extra money buys — a recognised credential, a placement team generating interviews, or an elite network. They are not worth it if you assumed a higher price meant deeper AI content; on newest-stack coverage, specialist programs in the ₹40,000–₹1,20,000 band often match programs costing two to three times more.",
-      },
-      {
-        q: "Is GST charged on AI course fees?",
-        a: "GST treatment varies by provider and by how the service is classified, and some providers quote fees inclusive while others add tax at checkout. The standard rate applied to such services is commonly 18% [VERIFY current rate and applicability]. Always ask for the total payable amount in writing rather than the headline fee.",
-      },
-      {
-        q: "Are AI course fees negotiable?",
-        a: "Headline fees are frequently discounted through seasonal offers, student pricing, group enrolments and referral credits. Ask directly what pricing is available for your situation, and ask for the final figure in email rather than on a call.",
-      },
-      {
-        q: "Do fees include exam or certification costs?",
-        a: "Provider programs usually include their own certificate in the fee. Vendor certifications such as AWS, Azure and Google Cloud charge a separate proctored exam fee, and NPTEL charges separately for the exam certificate [VERIFY current amounts].",
-      },
-      {
-        q: "Will my employer reimburse an AI course fee?",
-        a: "Many Indian IT-services employers and GCCs reimburse part or all of a fee through L&D budgets, usually against a recognised credential, a completion certificate and sometimes a service commitment. Get the program's name, fee, credential issuer and duration approved in writing before enrolling.",
-      },
-    ],
-  },
-  {
-    theme: "EMI, refunds and fine print",
-    items: [
-      {
-        q: "Is EMI available for AI courses?",
-        a: "Almost universally in the paid bands. EMI is either a card-based instalment plan through your bank or a loan through a non-banking financial company (NBFC) partner, typically over 6 to 36 months.",
-      },
-      {
-        q: "Is no-cost EMI really free?",
-        a: "No lender lends for free. In a no-cost EMI, the interest is funded by the provider, usually by removing a discount that a full upfront payer would have received, or by pricing the interest into the headline fee. Compare the total you pay under no-cost EMI against the best upfront price you can get; the difference is the real cost of the credit.",
-      },
-      {
-        q: "What happens to my EMI if I stop attending?",
-        a: "If your EMI is an NBFC or bank loan, the loan is between you and the lender and survives your dropout. The provider's refund policy and the lender's foreclosure terms are two separate documents with different windows and penalties. Read both before you sign either.",
-      },
-      {
-        q: "What is an ISA and should I sign one?",
-        a: "An Income Share Agreement defers part of the fee until you earn above a threshold, in exchange for a share of your income for a fixed period. Check the threshold, the percentage, the cap, the payment window and what happens if you take a lower-paying role — the total repaid can exceed the upfront fee.",
-      },
-      {
-        q: "What refund window should I expect?",
-        a: "Windows range from a few days after enrolment to a fixed number of live sessions attended, and some programs offer none after the batch starts. Ask for the refund clause as a document and note whether it refunds the fee, the fee minus administrative charges, or credits toward another batch.",
-      },
-      {
-        q: "Can I pause or defer a course after paying?",
-        a: "Some providers allow one batch deferral, sometimes with a fee. This matters more than most buyers realise, because work crises are the most common reason people abandon a program. Confirm the deferral policy in writing before enrolling.",
-      },
-      {
-        q: "Should I be worried about discount timers on pricing pages?",
-        a: "Treat them as marketing, not information. A price that resets after the timer expires tells you the deadline was not real. Any fee decision worth ₹50,000 or more deserves at least a day of thought.",
-      },
-    ],
-  },
-  {
-    theme: "Duration and commitment",
-    items: [
-      {
-        q: "What is the duration of an AI course?",
-        a: "Short certifications take 4–12 weeks; specialist AI/ML programs 5–9 months; bootcamps 6–18 months; university PG certificates 7–18 months; online degrees 3–4 years; executive programs 3–9 months.",
-      },
-      {
-        q: "How many hours a week do I actually need?",
-        a: "Plan for 10–15 hours a week for any serious career-switch program: roughly 4–6 hours of class plus the rest on code, projects and revision. Below 6 hours a week, a live cohort will outrun you.",
-      },
-      {
-        q: "Why do self-paced courses take longer than advertised?",
-        a: "A \"3-month\" self-paced course assumes an unrealistic weekly pace and no life events. In practice most learners take 6–9 months, and a large share never finish at all — which is why paying for structure is often the rational choice even though the content is cheaper elsewhere.",
-      },
-      {
-        q: "Can I finish an AI course while working full time?",
-        a: "Yes, in evening or weekend live batches, which is what most Indian AI programs are designed around. Career-break formats mostly exist in offline full-time institutes and premium bootcamps, and they carry lost income as a real cost.",
-      },
-      {
-        q: "Is a longer course better?",
-        a: "Not automatically. Judge cost per capability, not total months. An 18-month program often spends its extra time on breadth and credential requirements rather than deeper AI engineering.",
-      },
-    ],
-  },
-  {
-    theme: "Eligibility and background",
-    items: [
-      {
-        q: "Who is eligible for an AI course in India?",
-        a: "Most skill programs require graduation in any discipline plus basic aptitude; many accept final-year students. Degrees such as the IIT Madras BS start from 12th pass with a qualifier. Executive programs usually ask for 2–5+ years of work experience.",
-      },
-      {
-        q: "Can I do an AI course after 12th?",
-        a: "Yes. Options are an online degree with a qualifier route, or free and low-fee skill courses to build Python and maths first. A ₹1L+ job-oriented program is usually premature at that stage — the money is better spent after you have foundations and a clearer goal.",
-      },
-      {
-        q: "Can a non-IT graduate join an AI course?",
-        a: "Yes, and many programs include prerequisite onboarding for Python and maths. Budget an extra 1–2 months of effort before the core curriculum, which effectively raises your cost per month even when the fee is unchanged.",
-      },
-      {
-        q: "Do I need a CS degree?",
-        a: "No. Employers hiring AI engineers test whether you can build, evaluate and ship models, and a public portfolio answers that faster than a degree does. A CS degree helps mainly at companies with rigid HR filters and in research roles.",
-      },
-      {
-        q: "Do I need advanced maths?",
-        a: "For AI engineering you need intuition for linear algebra, probability, statistics and gradients — enough to choose metrics, diagnose training problems and reason about model behaviour. Rigorous mathematics is required for research roles, not for applied ones.",
-      },
-      {
-        q: "I have zero coding experience. Where do I start, and what should I pay?",
-        a: "Spend ₹0 to ₹5,000 and 6–10 weeks on Python, SQL and basic statistics first. Once you can write and debug a script unaided, a mid-band structured program becomes worth its fee, because you will use the mentorship instead of spending it on syntax.",
-      },
-    ],
-  },
-  {
-    theme: "Placement, salary and outcomes",
-    items: [
-      {
-        q: "Do AI courses provide placement?",
-        a: "Most provide placement or job assistance, not placement. Assistance typically means resume review, mock interviews, portfolio feedback and referrals to hiring partners. Ask for the specific list of services and for outcome statistics with a denominator.",
-      },
-      {
-        q: "What does a job guarantee actually guarantee?",
-        a: "Usually a refund under conditions — minimum attendance, assessment scores, a set number of applications, willingness to relocate, and a salary floor you must accept. The conditions, not the headline, are the product. Read them before you pay.",
-      },
-      {
-        q: "What salary can I expect after an AI course in India?",
-        a: "Ranges vary widely by role, city, company type and prior experience, and no course determines them. Treat any figure on a marketing page without a source and a denominator as unverified [VERIFY: current salary data from published surveys or job-portal aggregates].",
-      },
-      {
-        q: "How long until the fee pays back?",
-        a: "If a program costs ₹87,000 all-in and produces a ₹2,00,000 annual increase, the payback is roughly five to six months of the delta — but that is conditional on finishing, building a portfolio and applying hard for three months. If you stop in month three, the return is simply negative.",
-      },
-      {
-        q: "Do employers care which course I took?",
-        a: "Credentials matter most in HR screening, internal promotions and reimbursement approvals. In technical interviews the course name is nearly irrelevant; what you built, why you chose those metrics and what failed in your project carry the conversation.",
-      },
-      {
-        q: "Which roles are realistically reachable for a career switcher?",
-        a: "AI engineer, GenAI/LLM developer, MLOps engineer and AI-augmented analyst roles are the most accessible switching targets in 2026 because they reward shipping working systems. NLP and computer vision research roles usually expect a specialist background.",
-      },
-      {
-        q: "Where is AI hiring concentrated in India?",
-        a: "Global capability centres and product companies in Bengaluru, Hyderabad, Pune, NCR and Chennai, IT-services AI practices, AI-native startups, and enterprise adoption across BFSI, healthcare, retail and manufacturing [VERIFY with current hiring data].",
-      },
-    ],
-  },
-  {
-    theme: "Format, free options and choosing",
-    items: [
-      {
-        q: "Online vs offline AI course — which is cheaper?",
-        a: "Online is almost always cheaper in total cost. Offline fees are broadly comparable, but relocation, rent, commute and any lost income can add ₹60,000 or more over six months in a metro city [ILLUSTRATIVE].",
-      },
-      {
-        q: "Is an offline AI course worth the extra cost?",
-        a: "It is worth it if you know you need physical accountability and local peers, and you already live in the city. For Tier-2 and Tier-3 learners, a live online cohort with real mentorship delivers most of the accountability at a fraction of the total cost.",
-      },
-      {
-        q: "Are there free AI courses with certificates?",
-        a: "Yes. NPTEL and SWAYAM offer certificates for a modest exam fee, some vendor learning paths issue free badges, and MOOC platforms let you audit free and pay only for the certificate [VERIFY current amounts].",
-      },
-      {
-        q: "If content is free, why pay at all?",
-        a: "You are not paying for content. You are paying for structure, human feedback, a credential and career support. Pay for exactly the ones you cannot supply yourself, and no more.",
-      },
-      {
-        q: "What is the fee of an IIT AI course?",
-        a: "It depends entirely on what \"IIT\" means in that program. Executive certificate programs typically run ₹1,50,000–₹5,00,000+, an IIT Madras online degree is priced per term across three to four years, and some marketed \"IIT\" programs are short immersions or co-branded EdTech offerings. Always check who teaches, who certifies and how many hours the institute delivers [VERIFY per program].",
-      },
-      {
-        q: "Which fee band should I choose for a career switch?",
-        a: "For most switchers with 10–15 hours a week, the ₹40,000–₹1,20,000 specialist band gives the best capability per rupee, provided the program includes live mentorship, code review, a current GenAI and MLOps syllabus, and interview preparation.",
-      },
-      {
-        q: "I already paid for a course I abandoned. What now?",
-        a: "First settle the money question: read the refund clause and the loan agreement, and ask about deferral before assuming the fee is lost. Then diagnose why it stalled — usually pace, prerequisites or accountability — and choose the next program specifically to fix that, not to buy a bigger brand.",
-      },
-      {
-        q: "How do I check whether a program's syllabus is current?",
-        a: "Look for LLM fundamentals, embeddings and vector databases, RAG, fine-tuning, agent frameworks, evaluation and guardrails, and deployment with monitoring. A syllabus that stops at classical machine learning and a single deep-learning module is a 2023 product at 2026 prices.",
-      },
-      {
-        q: "Should I take one expensive course or two cheaper ones?",
-        a: "Two staged purchases work well if you are early: a low-fee foundation course, then a mid-band program once you can code. One mid-band program is better if you already code, because sequencing costs you months and AI moves fast.",
-      },
-    ],
-  },
+type Item = { q: string; a: string };
+const answer = (lead: string, detail: string): string => `${lead} ${detail}`;
+export const faqGroups: { theme: string; items: Item[] }[] = [
+  { theme: "Fees & cost", items: [
+    { q: "How much does an AI course cost in India in 2026?", a: answer("AI courses range from ₹0 to ₹5,00,000+ in India in 2026.", "Free university and open courses sit at one end; structured specialist cohorts commonly occupy the middle; executive credentials and placement-heavy bootcamps sit at the top. Compare the total payable amount, support and likely completion—not only the advertised fee. Provider-specific figures on this page remain marked [VERIFY] until checked against current public sources.") },
+    { q: "What is the average fee for an AI ML course?", a: answer("There is no honest single average because the category mixes short videos, cohorts, degrees and executive certificates.", "A useful planning range is ₹50,000–₹2,50,000 for a structured, job-oriented AI/ML program, while self-paced foundations can cost far less. Choose a comparable format first, then compare total cost, live hours, reviewed projects, credential value and career support within that band.") },
+    { q: "Which is the cheapest AI course in India?", a: answer("The cheapest credible route is free.", "NPTEL, SWAYAM, fast.ai, Hugging Face and MOOC audit modes can build strong foundations without tuition. A certificate or exam may cost extra [VERIFY]. Free is best when you can create your own sequence, deadlines and portfolio; otherwise, a low-fee cohort may have a better completion-adjusted cost despite its higher sticker price.") },
+    { q: "Are expensive AI courses better?", a: answer("No—higher price does not automatically mean better AI instruction.", "Premium fees often buy a recognised credential, placement operations, alumni access or senior peer networks rather than a deeper syllabus. Those are legitimate benefits when they match your goal. Compare curriculum freshness, human feedback, live hours and outcome evidence separately so you pay only for support or signalling you cannot provide yourself.") },
+    { q: "How much does an IIT AI course cost?", a: answer("The fee depends on the specific institute, course type and level of IIT involvement.", "Executive programs commonly occupy premium bands, while full degrees use term-based pricing and short co-branded offerings may follow another structure entirely. Check the issuing institution, teaching responsibility, live hours and current official fee page. Any amount not publicly verified should remain [VERIFY], not be inferred from a similar program.") },
+    { q: "What is the fee of an online AI course vs. an offline one?", a: answer("Online learning is usually cheaper in total cost, even when tuition looks similar.", "Offline study can add relocation, rent, commuting, equipment and lost work hours. Online formats range from free audits to premium live cohorts; offline fees also vary by city and centre. Build a six-month total-cost comparison using your actual travel and living assumptions, labelled [ILLUSTRATIVE], before choosing.") },
+    { q: "Do AI course fees include GST?", a: answer("Not always; ask for the total payable amount including GST in writing.", "Some providers show tax-inclusive pricing while others add applicable tax at checkout or in the invoice. Do not calculate from a headline alone. Confirm the tax treatment, invoice issuer, instalment total and whether financing charges attract additional tax. The commonly cited rate and its applicability should be [VERIFY] against current guidance.") },
+    { q: "What hidden costs should I budget for?", a: answer("Budget for finance charges, tools, cloud usage, exams, travel and your own time.", "Other possible costs include laptop upgrades, GPU or API credits, proctored certificates, placement add-ons, resubmission fees and lost income from fixed class hours. Ask which project infrastructure is included. Add each cost to the real-cost formula and divide by your realistic completion probability before comparing programs.") },
+    { q: "What is the LogicMojo AI & ML Course fee?", a: answer("The stated LogicMojo AI & ML Course fee is ₹87,000.", "The current offer specified for this guide is 15% off for the first 15 enrolments, producing a fee of ₹73,950. Re-check that the seat-limited offer is still active before each republication, and confirm GST treatment, EMI total, inclusions, refund terms and batch details in writing because those details remain [VERIFY].") },
+    { q: "Do AI courses offer student or early-bird discounts?", a: answer("Many providers advertise student, seasonal, referral or early-bird pricing.", "Treat a discount as real only when the base price, eligibility, expiry, total payable amount and refund implications are written down. A resetting timer is not evidence of scarcity. Compare the discounted upfront price with the total under EMI, and never let a same-call deadline replace curriculum and policy checks.") },
+  ]},
+  { theme: "EMI, discounts & refunds", items: [
+    { q: "Is EMI available for AI courses?", a: answer("EMI is widely available for paid AI programs, but terms differ.", "It may be a bank-card conversion or a separate education loan from an NBFC. Before signing, identify the lender, annual percentage rate, processing charge, tenure, late-payment consequences and total of all instalments. The provider’s cancellation policy and the lender’s agreement are separate obligations, so read both.") },
+    { q: "Is no-cost EMI really free?", a: answer("No-cost EMI is not automatically cost-free.", "Interest may be subsidised by the provider, offset by removing an upfront discount, or accompanied by processing charges and taxes. Ask for two written numbers: the best same-day upfront total and the total across every instalment. The difference reveals the effective financing cost even when the statement shows no interest line.") },
+    { q: "What happens to my EMI if I stop attending?", a: answer("Your EMI usually continues after you stop attending.", "When a lender has already paid the provider, your repayment duty is governed by the loan agreement, not classroom attendance. A course cancellation does not automatically close the loan. Check refund timing, foreclosure charges, deferral options and credit-reporting consequences before enrolling, especially when the repayment term exceeds the course duration.") },
+    { q: "Can I get a refund if the course isn't as promised?", a: answer("A refund is possible only under the provider’s written policy and applicable consumer rights.", "Save the sales page, syllabus, emails, invoice and promised inclusions. Note the exact cut-off date and permitted deductions. Raise discrepancies in writing promptly. Do not assume dissatisfaction alone triggers a refund, and verify current legal or regulatory remedies before citing them as guaranteed protection.") },
+    { q: "Can I negotiate AI course fees?", a: answer("You can ask, because many providers use variable offers, but there is no guaranteed discount.", "Request student, group, employer, referral or upfront-payment pricing without inventing urgency. Compare the final written total rather than verbal percentages. A lower fee is useful only if the same curriculum, support, certificate, refund rights and placement services remain included after the discount.") },
+    { q: "Does my employer reimburse AI courses?", a: answer("Some employers reimburse approved AI learning through L&D budgets.", "Approval usually depends on business relevance, provider documentation, successful completion and sometimes a service commitment. Submit the course name, curriculum, duration, fee, credential issuer and manager justification before paying. Confirm whether reimbursement covers GST, exams and tools, and whether repayment is required if you leave the company.") },
+  ]},
+  { theme: "Duration", items: [
+    { q: "How long does an AI course take?", a: answer("AI courses can take several weeks to several years depending on the outcome.", "Short literacy tracks often take 4–12 weeks, specialist career programs commonly take 5–12 months, and formal degrees take years. Published duration assumes a weekly pace; translate it into your available hours. A shorter course is not faster if you repeatedly pause or cannot complete its projects.") },
+    { q: "Can I finish an AI course in 3 months?", a: answer("Yes, if the scope is narrow or you already have programming and maths foundations.", "Three months can cover literacy, a targeted GenAI skill or an intensive foundation, but it is rarely enough for a complete beginner to build broad ML, deep-learning, deployment and interview capability while working full time. Judge the promised outcomes against live hours, assignments and project depth rather than the calendar label.") },
+    { q: "How many hours per week does an AI course need?", a: answer("Plan 10–15 hours a week for a serious career-track program.", "That usually includes classes, coding, reading, debugging and portfolio work. Under six hours can suit literacy or focused self-paced modules, but a live cohort may outrun you. Block the hours in your real calendar for the next six months and account for work peaks before paying.") },
+    { q: "Short certification or long PG program?", a: answer("Choose a short certification for a specific skill gap and a long PG program for breadth or credential value.", "If you already code and need RAG, cloud ML or model deployment, a compact course can be efficient. If HR recognition, academic progression or structured foundations matter, a longer program may justify its cost. Compare completion risk and opportunity cost alongside tuition.") },
+    { q: "Can I learn AI while working full time?", a: answer("Yes, provided the schedule matches your predictable weekly capacity.", "Weekend or evening cohorts work when recordings, deferrals and doubt support cover unavoidable work conflicts. Self-paced courses offer flexibility but demand more discipline. Protect fixed practice blocks, avoid overlapping major work releases, and plan for projects after class; attendance alone does not create employable evidence.") },
+  ]},
+  { theme: "Eligibility", items: [
+    { q: "Who is eligible for an AI course?", a: answer("Eligibility ranges from open entry to degree and experience requirements.", "Free and introductory courses usually accept anyone; career cohorts may expect graduation, aptitude or basic coding; executive programs often require work experience. Verify the exact public criteria for each program. More important than formal eligibility is readiness in Python, data handling and mathematical intuition for the promised pace.") },
+    { q: "Can I do an AI course after 12th?", a: answer("Yes, but foundations or a recognised degree path are usually the sensible first step.", "Build Python, SQL, statistics and small projects before taking a large loan for a job-oriented bootcamp. Some online degrees provide 12th-pass qualifier routes [VERIFY current rules]. At this stage, low-cost exploration protects your budget while showing whether you enjoy sustained coding work.") },
+    { q: "Can a non-IT graduate join an AI course?", a: answer("Yes—non-IT graduates can learn applied AI with sufficient onboarding and practice.", "Look for a bridge module in Python, SQL, statistics and problem-solving, and budget one or two extra months before advanced topics. Domain experience in finance, healthcare, manufacturing or operations can become an advantage when paired with technical execution. Avoid programs that hide prerequisites behind broad ‘no coding needed’ language.") },
+    { q: "Do I need coding before starting?", a: answer("Coding is not required for AI literacy, but it is required for AI engineering.", "A career-track learner should become comfortable with basic Python, debugging and data manipulation before deep-learning modules. If the course accepts beginners, verify that prerequisite onboarding is included and supported. Spending a few weeks on foundations can prevent expensive frustration in the first live cohort month.") },
+    { q: "Do I need maths?", a: answer("You need mathematical intuition for applied AI, not necessarily advanced proofs.", "Linear algebra, probability, statistics and gradients help you choose metrics, spot leakage and understand training behaviour. Research roles demand more depth. A practical course should connect maths to code and model decisions; a syllabus that avoids it entirely may leave you unable to diagnose why a model fails.") },
+    { q: "Is a CS degree necessary for AI jobs?", a: answer("A CS degree is not universally necessary for applied AI jobs.", "Hiring teams often care more about coding, systems thinking, evaluation and credible projects, although some companies retain degree filters and research roles may expect advanced qualifications. A course certificate cannot replace demonstrated capability. Build public work that explains the problem, trade-offs, metrics, failures and deployment choices.") },
+  ]},
+  { theme: "Placements & careers", items: [
+    { q: "Do AI courses provide placement?", a: answer("Most courses provide placement assistance, not a guaranteed job.", "Assistance may include resume review, mock interviews, referrals, job boards or hiring events. Ask for every service item, eligibility condition and outcome denominator: enrolled, completed, eligible, interviewed and placed over a defined period. Do not treat logos or isolated salary stories as evidence of a repeatable result.") },
+    { q: "What does \"job assistance\" actually include?", a: answer("Job assistance is a bundle of services whose scope must be written down.", "Useful components include portfolio review by a practitioner, role-specific resume feedback, repeated mock interviews, application strategy, verified referrals and interview debriefs. Ask how long support lasts, whether access depends on grades and who delivers it. A generic job board alone has limited value.") },
+    { q: "What salary can I expect after an AI course in India?", a: answer("No course can guarantee a salary, and the honest range depends on role, city and prior experience.", "A career switcher’s result is shaped by existing engineering depth, portfolio evidence, interview performance and market conditions. Use current salary reports and job postings with clear dates and sample definitions [VERIFY]. Treat provider figures without sources or denominators as marketing, not a personal forecast.") },
+    { q: "Can a fresher get an AI job after a course?", a: answer("Yes, but a certificate alone is rarely enough for a fresher.", "Entry roles reward Python, SQL, data work, model evaluation and evidence that you can finish projects independently. Internships, open-source work and strong case studies can bridge the experience gap. Apply to adjacent analyst and software roles as well as titles labelled AI, because first-role scope matters more than title.") },
+    { q: "How long after finishing does it take to get an AI job?", a: answer("There is no reliable universal timeline.", "Plan a focused application period of several months rather than expecting placement at graduation. Your speed depends on readiness, location, notice period, role flexibility, referrals and interview volume. Start portfolio review and mock interviews before the course ends, track conversion at each stage, and adjust the bottleneck rather than sending identical applications indefinitely.") },
+    { q: "Do Indian employers value online AI certificates?", a: answer("Employers value credible online certificates mainly as supporting evidence, not proof of job readiness.", "A recognised issuer can help with HR screening, internal mobility or reimbursement, while technical teams will inspect what you built and how you reason. The strongest certificate is paired with original projects, clear documentation and the ability to defend data, evaluation, cost and deployment decisions.") },
+  ]},
+  { theme: "Certification & value", items: [
+    { q: "Are free AI courses with certificates worth it?", a: answer("Yes, especially for foundations, exploration and a low-risk first credential.", "The certificate’s signalling power may be modest, but the learning can be excellent. Choose a recognised source, complete assessments and turn the material into an original project. Pay an exam fee only when the credential helps a specific application, reimbursement or academic goal; otherwise the capability is the valuable part.") },
+    { q: "Which AI certification is most valued in India?", a: answer("There is no single most-valued AI certification across Indian roles.", "Cloud certificates can help platform-specific positions, university credentials can help HR filters, and specialist programs can support applied portfolios. Start from target job descriptions and count repeated requirements. The right certification is the least expensive credible signal that closes a real gap alongside demonstrable work.") },
+    { q: "Is an AI course worth the fee in 2026?", a: answer("An AI course is worth its fee when it buys support you will use and can realistically complete.", "Content itself is abundant and often free; paid value comes from structure, human feedback, credential recognition and career operations. Compute total real cost, run the 15-point checklist and compare the result with your expected use—not an advertised salary. Completion and portfolio quality determine ROI more than price.") },
+  ]},
 ];

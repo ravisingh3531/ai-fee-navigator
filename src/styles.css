@@ -200,3 +200,179 @@
   .animate-fade-in, .section-reveal { animation: none; }
   .program-card { transition: none; }
 }
+
+@utility decision-step {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  margin-top: 3rem;
+  & h3 { margin-top: 0; }
+}
+
+@utility step-number {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-weight: 700;
+  box-shadow: 0 0 0 6px var(--accent);
+}
+
+@utility formula-panel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid color-mix(in oklab, var(--primary) 24%, var(--border));
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-lift);
+}
+
+@utility checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+  padding: 0;
+  list-style: none;
+  & li { display: grid; grid-template-columns: auto auto minmax(0,1fr); align-items: start; gap: .65rem; margin: 0; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow-panel); }
+  & li > span { font-family: var(--font-mono); font-size: .7rem; color: var(--primary); }
+  & svg { width: 1rem; height: 1rem; color: var(--primary); }
+  & p { margin: 0; font-size: .82rem; line-height: 1.5; }
+}
+
+@utility fee-finder {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(16rem, .7fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-lift);
+  & legend { display: flex; gap: .65rem; align-items: center; margin-bottom: .7rem; font-size: .9rem; font-weight: 700; }
+  & legend span { display: grid; place-items: center; width: 1.5rem; height: 1.5rem; border-radius: 999px; background: var(--accent); color: var(--primary); font-family: var(--font-mono); font-size: .65rem; }
+}
+
+@utility option-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  & button { white-space: normal; height: auto; min-height: 2.25rem; }
+}
+
+@utility finder-result {
+  position: sticky;
+  top: 5.5rem;
+  align-self: start;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: var(--accent);
+  border: 1px solid color-mix(in oklab, var(--primary) 25%, var(--border));
+}
+
+@utility finder-progress {
+  display: block;
+  width: 100%;
+  height: .5rem;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: var(--secondary);
+  &::-webkit-progress-bar { background: var(--secondary); }
+  &::-webkit-progress-value { background: var(--primary); transition: width 240ms ease; }
+  &::-moz-progress-bar { background: var(--primary); }
+}
+
+@utility profile-card {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-lift);
+}
+
+@utility profile-photo {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: .75rem;
+  aspect-ratio: 4 / 5;
+  border: 1px dashed var(--primary);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--primary);
+  text-align: center;
+  font-size: .7rem;
+  text-transform: uppercase;
+  & svg { width: 2rem; height: 2rem; }
+}
+
+@utility reviewer-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(19rem, 47%);
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  padding-bottom: .75rem;
+}
+
+@utility reviewer-card {
+  scroll-snap-align: start;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-panel);
+}
+
+@utility reviewer-avatar {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--primary);
+}
+
+@utility decision-rule {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: .75rem;
+  margin: 2rem 0;
+  & div { padding: 1.25rem; border-top: 3px solid var(--primary); background: var(--card); box-shadow: var(--shadow-panel); }
+  & span { display: block; margin-bottom: .5rem; color: var(--primary); font-size: .7rem; font-weight: 700; text-transform: uppercase; }
+  & strong { font-size: .9rem; line-height: 1.4; }
+}
+
+@utility mobile-course-cta {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .checklist-grid { grid-template-columns: 1fr; }
+  .fee-finder { grid-template-columns: 1fr; padding: 1rem; }
+  .finder-result { position: static; }
+  .profile-card { grid-template-columns: 1fr; padding: 1.25rem; }
+  .profile-photo { max-width: 12rem; }
+  .reviewer-track { grid-auto-columns: 88%; }
+  .decision-rule { grid-template-columns: 1fr; }
+  .mobile-course-cta { display: flex; position: fixed; z-index: 60; inset-inline: 1rem; bottom: 1rem; justify-content: center; padding: .9rem 1rem; border-radius: var(--radius); background: var(--primary); color: var(--primary-foreground); font-size: .8rem; font-weight: 700; box-shadow: var(--shadow-lift); }
+  body { padding-bottom: 5rem; }
+}
