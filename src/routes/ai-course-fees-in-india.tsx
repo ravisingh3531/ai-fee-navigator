@@ -586,6 +586,22 @@ function FeesGuide() {
             highlightMatch="Specialist AI/ML"
           />
 
+          <FromExperience title="The spread is real, and the cheap end is not the weak end">
+            <p>
+              When I lined up these categories on one screen, the thing that surprised me was not the
+              ₹5,00,000 top end — it was how little the ₹40,000–₹1,20,000 band gives up. I could see
+              live teaching, mentorship, projects and interview preparation inside that band, and the
+              extra lakh or two above it kept resolving into a credential source and a placement
+              department rather than more teaching.
+            </p>
+            <p>
+              So the question I now ask on every enquiry call is deliberately blunt: which of these
+              five things — content, structure, feedback, credential, career support — am I paying you
+              for? The good programmes answer it in a sentence. The ones that redirect to a discount
+              timer have answered it too.
+            </p>
+          </FromExperience>
+
           <H3>Why do AI course fees vary so much?</H3>
           <p>Eight cost drivers explain almost the entire spread, and only two of them are curriculum.</p>
           <ol>
@@ -660,6 +676,22 @@ function FeesGuide() {
             what exactly the certificate says. A provider unwilling to put those in an email has
             told you something useful.
           </p>
+
+          <FromExperience title="What actually happened when I asked for fees in writing">
+            <p>
+              Reading these pages taught me more about the category than any syllabus did. Some
+              providers publish a total payable amount and a refund window openly, which makes them
+              easy to compare and easy to trust. Others show no number at all until a counsellor calls
+              you, and the number that arrives on the call is not always the number on the page.
+            </p>
+            <p>
+              My working rule after that exercise: ask for total payable amount including tax, the
+              EMI lender and interest, the refund cut-off date and the exact certificate wording — in
+              one email. How quickly a provider replies in writing is, in my experience, the single
+              most reliable early signal you get about how they will treat you six months in. Where I
+              could not get a figure this way, this page keeps a bracketed gap rather than a guess.
+            </p>
+          </FromExperience>
 
           <TableBlock
             number="Table 2"
@@ -847,7 +879,21 @@ function FeesGuide() {
             weekend-only offline formats stretch a six-month syllabus across nine or ten months,
             which changes your cost per month substantially.
           </p>
-        </Section>
+
+          <FromExperience title="The offline premium I keep seeing is a rent bill, not a teaching bill">
+            <p>
+              Every time I have costed an offline programme for someone outside a metro, the fee stopped
+              being the main number by week two. Rent, food and commute for six months routinely
+              matched or exceeded the tuition, and the syllabus was frequently the same live stream the
+              online cohort watched from home.
+            </p>
+            <p>
+              Where I have seen offline genuinely earn its premium is with learners who had already
+              abandoned two self-paced courses. For them the classroom was buying attendance, not
+              content — and that is a legitimate thing to buy, as long as you know that is the purchase
+              you are making.
+            </p>
+          </FromExperience>        </Section>
 
         {/* SECTION 7 */}
         <Section id="duration-eligibility">
@@ -929,7 +975,22 @@ function FeesGuide() {
             in 2026 is for engineering roles that ship systems, not research roles that produce
             papers. Buy for the job that exists in volume.
           </p>
-        </Section>
+
+          <FromExperience title="Duration claims and eligibility lines are where I check the fine print hardest">
+            <p>
+              The pattern I run into most often is a &quot;3-month&quot; self-paced programme that
+              assumes an uninterrupted pace nobody working full time sustains. So I stopped reading
+              advertised duration as a fact and started converting it: total hours divided by the hours
+              you will honestly give it each week, plus a month of slippage.
+            </p>
+            <p>
+              On eligibility, the detail worth chasing is the bridge module. Programmes that publish a
+              four-to-eight-week Python and maths onboarding are telling you they expect non-tech
+              joiners and have planned for them. Programmes that only say &quot;graduation&quot; leave
+              you to discover in week three whether you were ready — and that discovery is where I have
+              seen most non-tech learners stall, at any fee.
+            </p>
+          </FromExperience>        </Section>
 
         {/* SECTION 7B — master comparison */}
         <Section id="master-table">
@@ -962,7 +1023,21 @@ function FeesGuide() {
             design — which is fine if you can supply structure and feedback yourself, and expensive
             if you cannot.
           </Note>
-        </Section>
+
+          <FromExperience title="Two columns predict regret better than the fee column">
+            <p>
+              Building this table row by row changed how I read the whole market. Once mentorship and
+              placement support are separate columns, the fee stops looking like a quality score and
+              starts looking like a bill of materials. Several expensive rows buy a credential and a
+              placement team; several cheap rows buy excellent content and nobody to ask.
+            </p>
+            <p>
+              That is why I label cells rather than rate them. &quot;Provider-reported&quot; on this
+              page means exactly what it says: the provider claims it, I have not confirmed it, and you
+              should ask for it in writing. I would rather publish a visible gap than a confident
+              number I cannot stand behind.
+            </p>
+          </FromExperience>        </Section>
 
         {/* SECTION 8 */}
 
@@ -987,6 +1062,22 @@ function FeesGuide() {
             highlightMatch="LogicMojo"
             caption="Read down the RAG, fine-tuning and agents columns: newest-stack coverage tracks how recently a syllabus was rebuilt, not how much it costs."
           />
+
+          <FromExperience title="How I read a syllabus for the newest stack">
+            <p>
+              I look for four named things, in this order: retrieval-augmented generation, fine-tuning,
+              agents, and evaluation or deployment. If they appear only as bullet points inside a single
+              final &quot;Generative AI&quot; module, that is usually a 2023 syllabus with a 2026 cover.
+              If they appear as separate modules with their own projects, someone rebuilt the course
+              recently.
+            </p>
+            <p>
+              Price has been a poor predictor of this in every comparison I have done. I have seen
+              current, agent-heavy content inside mid-band programmes and dated content inside premium
+              ones. That single check has saved more money for people who asked me than any discount
+              negotiation.
+            </p>
+          </FromExperience>
         </Section>
 
         {/* SECTION 9 */}
@@ -1179,6 +1270,23 @@ function FeesGuide() {
             against the criteria below, not a claim that it is the best course in India, and not a
             promise about your outcome.
           </p>
+
+          <FromExperience title="Why this recommendation is narrow on purpose">
+            <p>
+              I only make one recommendation on this page, and it is scoped to one reader: a beginner
+              who wants structure, live support and a path through ML into generative AI without paying
+              a credential premium. That is the gap I kept seeing while comparing bands, and the
+              ₹40,000–₹1,20,000 specialist band is where it closes.
+            </p>
+            <p>
+              I will not dress this up beyond the evidence. The fee and the offer are published, so I
+              state them as verified. Duration, batch details, EMI, refund policy and everything
+              LogicMojo says about support are marked for you to confirm, and the learner accounts stay
+              on LogicMojo&apos;s own success-story page where you can read them yourself. If your real
+              bottleneck is an HR filter that wants a university name, my honest answer is that a
+              premium-band programme fits you better than this one.
+            </p>
+          </FromExperience>
           <Callout label="Disclosure and evidence standard">
             LogicMojo publishes this guide, so hold this section to a higher bar than the rest of it.
             Every factual claim below is either a fee published on the LogicMojo course page
