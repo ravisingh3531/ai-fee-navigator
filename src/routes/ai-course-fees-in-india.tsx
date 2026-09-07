@@ -2,9 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import heroImage from "@/assets/fee-spectrum-hero.jpg";
 import { Callout, Faq, H2, H3, Note, Section, TableBlock } from "@/components/article";
+import { CourseRecommendationQuiz } from "@/components/course-recommendation-quiz";
 import { FeeDecisionFramework } from "@/components/fee-decision-framework";
+import { FeeRoiCalculator } from "@/components/fee-roi-calculator";
 import { AuthorProfile, ReviewerCarousel } from "@/components/trust-sections";
 import { faqGroups } from "@/content/faqs";
+import { masterComparison } from "@/content/master-comparison";
+
 import {
   LAST_UPDATED,
   feeSpectrum,
