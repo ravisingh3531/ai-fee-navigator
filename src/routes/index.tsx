@@ -323,11 +323,11 @@ function ProgramCard({ p }: { p: Program }) {
   const isLogicMojo = p.name.startsWith("LogicMojo");
   return (
     <article
-      className={`mt-8 rounded-lg border p-5 shadow-panel ${
-        isLogicMojo ? "border-highlight bg-highlight/10" : "border-border bg-card"
+      className={`program-card mt-8 rounded-lg border p-6 shadow-panel ${
+        isLogicMojo ? "border-primary bg-accent" : "border-border bg-card"
       }`}
     >
-      <h3 className="text-lg font-semibold text-foreground">{p.name}</h3>
+      <h3 className="text-xl font-semibold text-foreground">{p.name}</h3>
       <dl className="mt-4 grid gap-x-6 gap-y-2 text-[0.875rem] sm:grid-cols-[minmax(0,14rem)_1fr]">
         {rows.map(([k, v]) => (
           <div key={k} className="sm:col-span-2 sm:grid sm:grid-cols-subgrid">
@@ -344,43 +344,43 @@ function ProgramCard({ p }: { p: Program }) {
 function FeesGuide() {
   return (
     <main className="min-h-screen bg-background">
-      <header className="border-b border-border bg-card/70">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
+      <header className="sticky top-0 z-50 border-b border-border bg-card/90 backdrop-blur-xl">
+        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4">
           <span className="font-display text-sm font-bold tracking-tight text-foreground">
             LogicMojo
           </span>
           <a
             href="#logicmojo"
-            className="rounded-md bg-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            className="shrink-0 rounded-md bg-primary px-3.5 py-2 text-xs font-semibold text-primary-foreground shadow-panel transition-all hover:-translate-y-0.5 hover:bg-primary/90"
           >
             AI &amp; ML Course — ₹87,000
           </a>
         </div>
       </header>
 
-      <div className="mx-auto max-w-5xl px-5 py-10 article-body">
+      <div className="article-body mx-auto max-w-6xl px-5 py-12 sm:py-16">
         {/* SECTION 1 — H1, quick answer, introduction */}
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+        <p className="animate-fade-in text-xs font-semibold uppercase tracking-[0.18em] text-primary">
           Fees &amp; budgeting guide · India
         </p>
-        <h1 className="mt-3 text-3xl font-bold leading-tight sm:text-[2.6rem]">
+        <h1 className="animate-fade-in mt-4 max-w-5xl text-4xl font-bold leading-[1.12] sm:text-6xl">
           AI Course Fees in India 2026: Fees, Duration, Eligibility &amp; Career Scope
         </h1>
-        <p className="mt-3 text-sm text-muted-foreground">
+        <p className="animate-fade-in mt-5 text-sm text-muted-foreground">
           Last updated: {LAST_UPDATED} · Reading time: approximately 45 minutes
         </p>
-        <p className="mt-3 rounded-md border border-border bg-muted/60 p-4 text-sm text-muted-foreground">
+        <p className="mt-6 max-w-4xl border-l-2 border-primary bg-accent/50 px-5 py-4 text-sm text-muted-foreground">
           <strong className="text-foreground">Disclosure:</strong> this page is published by
           LogicMojo, which offers the AI &amp; ML Course featured below. Fees and details for all
           other programs are taken from their public pages as of {LAST_UPDATED} and are marked where
           a provider does not publish them.
         </p>
 
-        <div className="mt-6 rounded-lg border-2 border-primary bg-accent/40 p-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+        <div className="quick-answer mt-10 overflow-hidden rounded-lg bg-primary p-6 text-primary-foreground shadow-lift sm:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary-foreground/80">
             Quick Answer
           </p>
-          <p className="mt-2 text-[0.98rem] leading-relaxed text-foreground">
+          <p className="mt-3 text-[1.02rem] leading-relaxed text-primary-foreground">
             <strong>AI course fees in India</strong> in 2026 range from{" "}
             <strong>₹0 (free MOOCs and NPTEL) to ₹5,00,000+ </strong>
             (IIT/IIM executive programs and premium bootcamps). Most structured, job-oriented AI/ML
@@ -399,7 +399,7 @@ function FeesGuide() {
           alt="AI course fees in India 2026 shown as a rising staircase of rupee-marked fee bands"
           width={1600}
           height={912}
-          className="mt-8 w-full rounded-lg border border-border shadow-lift"
+          className="mt-10 aspect-[16/8] w-full rounded-lg border border-border object-cover shadow-lift"
         />
 
         <p className="mt-8">
@@ -492,14 +492,14 @@ function FeesGuide() {
         {/* SECTION 2 — TOC */}
         <nav
           aria-label="Table of contents"
-          className="my-10 rounded-lg border border-border bg-card p-5 shadow-panel"
+          className="my-14 rounded-lg border border-border bg-card p-6 shadow-panel sm:p-8"
         >
           <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-primary">
             On this page
           </h2>
-          <ol className="mt-3 grid gap-1.5 text-[0.9rem] sm:grid-cols-2">
+          <ol className="mt-5 grid gap-2.5 text-[0.9rem] sm:grid-cols-2">
             {toc.map(([id, label], i) => (
-              <li key={id} className="flex gap-2">
+               <li key={id} className="group flex gap-3 rounded-md p-2 transition-colors hover:bg-accent">
                 <span className="rupee text-muted-foreground">{String(i + 1).padStart(2, "0")}</span>
                 <a href={`#${id}`} className="text-primary underline-offset-4 hover:underline">
                   {label}
@@ -1339,7 +1339,7 @@ function FeesGuide() {
           </p>
           <ol className="mt-4 space-y-2">
             {checklist.map((item) => (
-              <li key={item} className="rounded-md border border-border bg-card px-4 py-3 text-[0.93rem]">
+              <li key={item} className="rounded-lg border border-border bg-card px-5 py-4 text-[0.93rem] shadow-panel transition-transform hover:-translate-y-0.5">
                 {item}
               </li>
             ))}
@@ -1444,7 +1444,7 @@ function FeesGuide() {
             three months of applications after the final class. That is what turns a fee into a
             career change — and it is the one part nobody can sell you.
           </p>
-          <div className="mt-8 rounded-lg border border-highlight bg-highlight/15 p-6">
+          <div className="mt-8 rounded-lg border border-primary bg-accent p-6 shadow-lift sm:p-8">
             <h3 className="text-lg font-semibold text-foreground">
               LogicMojo AI &amp; ML Course — ₹87,000 · ₹73,950 for the first 15 enrolments
             </h3>
@@ -1464,8 +1464,8 @@ function FeesGuide() {
         </Section>
       </div>
 
-      <footer className="mt-16 border-t border-border bg-card">
-        <div className="mx-auto max-w-5xl px-5 py-10 text-sm text-muted-foreground">
+      <footer className="mt-20 border-t border-border bg-card">
+        <div className="mx-auto max-w-6xl px-5 py-12 text-sm text-muted-foreground">
           <p className="font-display text-base font-bold text-foreground">LogicMojo</p>
           <p className="mt-2 max-w-2xl">
             LogicMojo offers the AI &amp; ML Course featured on this page. All other programme
