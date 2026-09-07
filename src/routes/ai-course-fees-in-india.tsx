@@ -1163,7 +1163,124 @@ function FeesGuide() {
           </div>
         </Section>
 
+        {/* SECTION 9B — recommendation */}
+        <Section id="recommendation">
+          <H2>My Experience-Based Solution: My Research-Backed Recommendation</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            After working through every fee band on this page, one recommendation follows for a
+            specific reader: <strong>if you are a beginner who wants a structured path into AI, ML
+            and Generative AI with placement support, the LogicMojo AI &amp; ML Course is the
+            best-fit option among the programmes evaluated here.</strong> That is a fit judgement
+            against the criteria below, not a claim that it is the best course in India, and not a
+            promise about your outcome.
+          </p>
+          <Callout label="Disclosure and evidence standard">
+            LogicMojo publishes this guide, so hold this section to a higher bar than the rest of it.
+            Every factual claim below is either a fee published on the LogicMojo course page
+            (<strong>Verified</strong>), a claim LogicMojo makes that you should confirm
+            (<strong>provider-reported</strong>), or an explicit <strong>[VERIFY]</strong> gap. There
+            are no invented placement percentages, salary figures, hiring-partner lists, testimonials
+            or personal anecdotes anywhere in this recommendation.
+          </Callout>
+
+          <H3>1. Course fee and value for money</H3>
+          <p>
+            <strong>Verified:</strong> ₹87,000, with a 15% discount for the first 15 enrolments that
+            brings it to ₹73,950 — published on the LogicMojo course page. Tax treatment, EMI terms
+            and refund policy are <strong>[VERIFY]</strong>.
+          </p>
+          <p>
+            The value argument is structural rather than promotional. Comparable live, mentor-led
+            AI/ML programmes with career support commonly sit in the ₹1,50,000–₹3,50,000 university-
+            affiliated band or the ₹2,50,000–₹4,00,000 placement-infrastructure band, as the master
+            table shows. LogicMojo sits in the ₹40,000–₹1,20,000 specialist band while still offering
+            live teaching, mentorship, projects and interview preparation. For a beginner buying
+            capability rather than a university line on a CV, that is where cost per unit of
+            capability tends to be lowest. If what you actually need is a branded credential for an
+            HR filter, a premium-band programme is the more rational purchase — say so to yourself
+            before you pay.
+          </p>
+
+          <H3>2. Placement support and available track record</H3>
+          <p>
+            <strong>Provider-reported:</strong> interview preparation, resume and career guidance, and
+            job assistance. This is <em>assistance</em>, not a placement guarantee, and this guide
+            makes no guarantee either. Published learner stories are available at{" "}
+            <a href="https://logicmojo.com/success-story" rel="sponsored" className="font-semibold text-primary underline">
+              logicmojo.com/success-story
+            </a>{" "}
+            — read them as provider-published testimonials, which is what they are. This guide has not
+            independently audited them, and quotes none of them as proof.
+          </p>
+          <p>
+            What to do with that: ask for the placement-support scope item by item in writing, ask how
+            many learners in the two most recent completed batches used it, and ask to speak to two
+            recent alumni you did not pick from a curated page. A provider willing to answer those
+            three questions is giving you far better evidence than any percentage on a landing page.
+            Any programme that shows you a placement number without a denominator has told you nothing.
+          </p>
+
+          <H3>3. Beginner-friendly, step-by-step curriculum</H3>
+          <p>
+            <strong>Provider-reported [VERIFY current syllabus]:</strong> the sequence starts with
+            prerequisite onboarding — Python and the mathematics intuition a beginner needs — before
+            machine learning begins. That ordering is the single most important feature for a
+            beginner. Most abandoned AI courses are abandoned in week three, when a syllabus that
+            assumed Python and basic statistics leaves a non-tech learner behind with no way back in.
+          </p>
+          <TableBlock
+            number="Recommendation table"
+            title="LogicMojo learning path as published (provider-reported — verify the current syllabus)"
+            headers={["Stage", "What it covers", "Why a beginner needs it"]}
+            rows={[
+              ["Foundations", "Python programming, statistics and probability intuition", "Removes the week-three cliff that ends most self-paced attempts"],
+              ["Machine learning", "Supervised and unsupervised models, evaluation, feature work", "The vocabulary and judgement every AI interview tests"],
+              ["Deep learning", "Neural networks, training dynamics, computer vision basics", "Required before NLP and Transformers make sense"],
+              ["NLP & Transformers", "Text processing, embeddings, attention, Transformer architecture", "The foundation the entire GenAI stack is built on"],
+              ["Generative AI", "Prompt engineering, LLMs, RAG, LangChain, vector databases, fine-tuning, AI agents", "The stack Indian AI hiring is actually asking for in 2026"],
+              ["Projects & career", "Real-world projects, interview preparation, resume and career guidance", "Converts study into something a hiring manager can assess"],
+            ]}
+            caption="Module names follow LogicMojo's published course page. Confirm the current list, project briefs and batch duration before enrolling."
+          />
+
+          <H3>4. Generative AI depth, not GenAI decoration</H3>
+          <p>
+            The distinguishing test for any 2026 AI syllabus is whether GenAI is a module or a
+            marketing line. Prompt engineering alone is a marketing line. A syllabus that names{" "}
+            <strong>RAG, LangChain, vector databases, fine-tuning and agents</strong> is describing
+            the work that AI engineering roles are hired for — retrieval pipelines, evaluation, and
+            agents that call tools. LogicMojo&apos;s page names all of these
+            (<strong>provider-reported</strong>). Ask for the project briefs: a RAG project with a
+            real document set and an evaluation step is evidence, and a chatbot demo is not.
+          </p>
+
+          <H3>5. Real projects, interview preparation and career guidance</H3>
+          <p>
+            <strong>Provider-reported [VERIFY count and briefs]:</strong> real-world projects,
+            interview preparation, resume and career guidance, and job assistance. For a beginner
+            these matter more than any extra module, because a portfolio you can defend in an
+            interview is the only artefact that transfers. Ask two questions before paying: does a
+            human review your code, and can you keep and publish the projects afterwards.
+          </p>
+
+          <H3>Where I would not recommend it</H3>
+          <p>
+            This recommendation is bounded, which is what makes it useful. Choose something else if
+            your budget is zero — the free stack in the master table is the honest answer. Choose a
+            university-affiliated programme if a recognised credential for a promotion or HR filter
+            is the real requirement. Choose a placement-infrastructure bootcamp if you have the time
+            and budget for eleven-plus months and placement machinery is your priority. And choose
+            short vendor certifications if you only want AI literacy in your current role.
+          </p>
+          <Note>
+            Whatever you choose, the last step is identical: get fee, tax, EMI, duration, syllabus,
+            mentorship level, placement-support scope and refund policy confirmed in writing. A
+            recommendation is a starting point for that conversation, never a substitute for it.
+          </Note>
+        </Section>
+
         {/* SECTION 10 */}
+
         <Section id="inclusions">
           <H2>What Is Included in AI Course Fees? (And What Isn&apos;t)</H2>
           <p>
