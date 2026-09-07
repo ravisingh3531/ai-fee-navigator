@@ -1,0 +1,6 @@
+- [ ] Build fee-first framework and interactive finder
+- [ ] Add author and reviewer trust sections
+- [ ] Replace FAQ set with the specified 36 answers
+- [ ] Expand final guide and footer
+- [ ] Move article to /ai-course-fees-in-india and add metadata/schema
+- [ ] Verify desktop, mobile, interactions, links, and errors
