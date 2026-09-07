@@ -1571,7 +1571,56 @@ function FeesGuide() {
           <FeeDecisionFramework />
         </Section>
 
+        {/* SECTION 13B — methodology */}
+        <Section id="methodology">
+          <H2>Research &amp; Selection Methodology</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            Every programme on this page was assessed against the same twelve criteria, and no
+            criterion produced a score that ranks providers against each other. The purpose is to show
+            what a fee buys, so you can match it to what you need.
+          </p>
+          <TableBlock
+            number="Methodology table"
+            title="The twelve evaluation criteria"
+            headers={["Criterion", "What was checked", "Evidence standard applied"]}
+            rows={[
+              ["Fees / value for money", "Published fee, tax treatment, EMI, refund window", "Provider's own pricing page; unpublished figures marked [VERIFY]"],
+              ["Beginner-friendliness", "Whether Python and maths foundations precede ML", "Published syllabus order"],
+              ["Duration", "Stated months and expected weekly hours", "Published figures; otherwise [VERIFY]"],
+              ["Curriculum depth", "ML, DL, NLP coverage and last-updated signals", "Public syllabus only"],
+              ["GenAI relevance", "Presence of RAG, LangChain, vector DBs, fine-tuning, agents", "Named modules, not marketing copy"],
+              ["Projects", "Number, briefs, and whether work is portfolio-usable", "Published briefs; otherwise [VERIFY]"],
+              ["Mentorship", "Live teaching, doubt-resolution, human code review", "Published claims labelled provider-reported"],
+              ["Placement support", "Scope of assistance versus any guarantee language", "Claims recorded as claims; no percentage repeated without a denominator"],
+              ["Student outcomes / reviews", "Publicly available learner accounts and discussion", "Treated as testimony, never as a statistic"],
+              ["Instructor credentials", "Whether a named instructor is published for a batch", "Public pages; otherwise [VERIFY]"],
+              ["Hiring network", "Whether partner claims are specific and checkable", "Unverifiable partner logos not repeated as fact"],
+              ["Career support", "Resume, mock interviews, referrals, post-course access", "Published inclusions only"],
+            ]}
+          />
+
+          <H3>How information was cross-checked</H3>
+          <ul className="source-list">
+            <li>Official course and pricing pages, as the only source used for any fee figure quoted as verified.</li>
+            <li>LinkedIn alumni profiles, to see what roles graduates actually list — read as directional signal, never counted into a placement rate.</li>
+            <li>Reddit and Quora threads, used to identify recurring complaints worth asking a provider about, not as evidence of quality.</li>
+            <li>Review platforms, read for patterns rather than scores, since incentivised reviews are common on both sides.</li>
+            <li>YouTube walkthroughs and syllabus reviews, where they show real course material rather than affiliate promotion.</li>
+          </ul>
+
+          <H3>What this methodology deliberately refuses to do</H3>
+          <p>
+            It does not estimate a fee that a provider has not published, publish a salary figure
+            without a named source, repeat a placement percentage without a denominator and a batch
+            date, invent a testimonial or a student outcome, or rank providers first-to-last. Where a
+            detail could not be confirmed, the page shows a visible placeholder instead of a
+            plausible-looking number. Fees, offers and syllabi change frequently, so every figure is
+            re-verified quarterly and carries a verification date.
+          </p>
+        </Section>
+
         {/* SECTION 14 — author */}
+
         <Section id="author">
           <H2>About the Author</H2>
           <AuthorProfile />
