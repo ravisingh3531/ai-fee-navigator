@@ -5,6 +5,8 @@ import { Callout, Faq, H2, H3, Note, Section, TableBlock } from "@/components/ar
 import { CourseRecommendationQuiz } from "@/components/course-recommendation-quiz";
 import { FeeDecisionFramework } from "@/components/fee-decision-framework";
 import { FeeRoiCalculator } from "@/components/fee-roi-calculator";
+import { EeatPanel, FromExperience } from "@/components/eeat";
+
 import { AuthorProfile, ReviewerCarousel } from "@/components/trust-sections";
 import { faqGroups } from "@/content/faqs";
 import { masterComparison } from "@/content/master-comparison";
