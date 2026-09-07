@@ -926,7 +926,41 @@ function FeesGuide() {
           </p>
         </Section>
 
+        {/* SECTION 7B — master comparison */}
+        <Section id="master-table">
+          <H2>Master Comparison Table — Fees, Duration, Eligibility, Curriculum, Mentorship, Placement &amp; Value for Money</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            One table, eleven columns, thirteen representative options across every fee band. Read it
+            left to right as a single question: for this fee, what teaching, feedback and career
+            support am I actually buying?
+          </p>
+          <Callout label="How to read the labels">
+            <strong>Verified</strong> means the figure is published on the provider&apos;s own public
+            page and was re-checked for this guide. <strong>Provider-reported</strong> means the
+            provider states it and this guide has not independently confirmed it — treat it as a claim,
+            not a fact. <strong>[VERIFY]</strong> means the detail is not publicly published; ask for it
+            in writing before you pay. No fee, salary, placement percentage or student outcome on this
+            page is estimated or invented.
+          </Callout>
+          <TableBlock
+            number="Master table"
+            title="AI course fees vs. what the fee buys (2026)"
+            note="Ordered by fee band ascending. Order implies nothing about quality."
+            headers={masterComparison.headers}
+            rows={masterComparison.rows}
+            highlightMatch="LogicMojo"
+            caption="Value-for-money is a judgement about cost per unit of capability or credential, not a rating of teaching quality."
+          />
+          <Note>
+            Two columns decide most regrets: <strong>mentorship</strong> and{" "}
+            <strong>placement support</strong>. Free and recorded courses score zero on both by
+            design — which is fine if you can supply structure and feedback yourself, and expensive
+            if you cannot.
+          </Note>
+        </Section>
+
         {/* SECTION 8 */}
+
         <Section id="detailed-comparison">
           <H2>Detailed AI Course Comparison — Fees, Duration, Eligibility, Curriculum &amp; Career Value</H2>
           <p>
