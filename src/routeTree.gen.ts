@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiCourseFeesInIndiaRouteImport } from './routes/ai-course-fees-in-india'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiCourseFeesInIndiaRoute = AiCourseFeesInIndiaRouteImport.update({
+  id: '/ai-course-fees-in-india',
+  path: '/ai-course-fees-in-india',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-course-fees-in-india': typeof AiCourseFeesInIndiaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-course-fees-in-india': typeof AiCourseFeesInIndiaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-course-fees-in-india': typeof AiCourseFeesInIndiaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/ai-course-fees-in-india'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/ai-course-fees-in-india'
+  id: '__root__' | '/' | '/ai-course-fees-in-india'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiCourseFeesInIndiaRoute: typeof AiCourseFeesInIndiaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-course-fees-in-india': {
+      id: '/ai-course-fees-in-india'
+      path: '/ai-course-fees-in-india'
+      fullPath: '/ai-course-fees-in-india'
+      preLoaderRoute: typeof AiCourseFeesInIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiCourseFeesInIndiaRoute: AiCourseFeesInIndiaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -28,27 +28,66 @@ import {
 } from "@/content/tables";
 
 export const Route = createFileRoute("/ai-course-fees-in-india")({
-  head: () => ({
-    meta: [
-      { title: "AI Course Fees in India 2026: Fees, Duration & Eligibility" },
-      {
-        name: "description",
-        content:
-          "AI course fees in India 2026: ₹0 to ₹5L+ compared across 25+ programs — fee tables, duration, eligibility, EMI fine print, salary scope and ROI.",
+  head: () => {
+    const canonical = "/ai-course-fees-in-india";
+    const articleSchema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "AI Course Fees in India 2026: Fees, Duration & Eligibility",
+      description: "AI course fees in India 2026 compared: fee ranges by course type, online vs offline, EMI and hidden costs, duration, eligibility, salary scope and ROI.",
+      author: { "@type": "Organization", name: "LogicMojo" },
+      publisher: { "@type": "Organization", name: "LogicMojo" },
+      datePublished: "2026-09-07",
+      dateModified: "2026-09-07",
+      mainEntityOfPage: canonical,
+    };
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqGroups.flatMap((group) => group.items.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      }))),
+    };
+    const courseSchema = {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      name: "LogicMojo AI & ML Course",
+      description: "A live online AI and machine learning course. Curriculum, duration, inclusions and batch details require verification on the current course page.",
+      provider: { "@type": "Organization", name: "LogicMojo", sameAs: "https://logicmojo.com" },
+      offers: {
+        "@type": "Offer",
+        price: "87000",
+        priceCurrency: "INR",
+        description: "15% discount for the first 15 enrolments: ₹73,950. Re-check availability before enrolment.",
       },
-      {
-        property: "og:title",
-        content: "AI Course Fees in India 2026: Fees, Duration, Eligibility & Career Scope",
-      },
-      {
-        property: "og:description",
-        content:
-          "Verified 2026 fee ranges for AI/ML programs in India — online, offline, certification, bootcamp, university and executive — with EMI terms, eligibility and ROI scenarios.",
-      },
-      { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+    };
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "/" },
+        { "@type": "ListItem", position: 2, name: "AI Course Fees in India", item: canonical },
+      ],
+    };
+    return {
+      meta: [
+        { title: "AI Course Fees in India 2026: Fees, Duration & Eligibility" },
+        { name: "description", content: "AI course fees in India 2026 compared: fee ranges by course type, online vs offline, EMI and hidden costs, duration, eligibility, salary scope and ROI." },
+        { property: "og:title", content: "AI Course Fees in India 2026: Fees, Duration & Eligibility" },
+        { property: "og:description", content: "AI course fees in India 2026 compared: fee ranges by course type, online vs offline, EMI and hidden costs, duration, eligibility, salary scope and ROI." },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: canonical },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+      links: [{ rel: "canonical", href: canonical }],
+      scripts: [articleSchema, faqSchema, courseSchema, breadcrumbSchema].map((value) => ({
+        type: "application/ld+json",
+        children: JSON.stringify(value),
+      })),
+    };
+  },
   component: FeesGuide,
 });
 
@@ -1333,152 +1372,99 @@ function FeesGuide() {
           </Note>
         </Section>
 
-        {/* SECTION 13 — checklist */}
+        {/* SECTION 13 — fee-first framework */}
         <Section id="checklist">
-          <H2>Course-Selection Checklist &amp; Decision Guide</H2>
-          <p>
-            Twelve questions, all of which should be answered in writing before money moves. A
-            provider who answers all twelve plainly has earned a shortlist place regardless of price.
+          <H2>How to Choose an AI Course in 2026 — Fee-First Decision Framework</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            A useful course decision starts with the outcome, not a provider list. Work through these
+            five steps in order: define the goal, calculate the real cost, account for your completion
+            pattern, verify the contract, and only then shortlist programs.
           </p>
-          <ol className="mt-4 space-y-2">
-            {checklist.map((item) => (
-              <li key={item} className="rounded-lg border border-border bg-card px-5 py-4 text-[0.93rem] shadow-panel transition-transform hover:-translate-y-0.5">
-                {item}
-              </li>
-            ))}
-          </ol>
-          <Callout label="If your employer is reimbursing the fee">
-            Get the programme name, fee, credential issuer and duration approved in writing first,
-            and ask whether reimbursement is conditional on completion or on a service commitment.
-            Where the employer pays, the credential band becomes far more attractive, because the
-            cost that usually makes it hard to justify is not yours.
-          </Callout>
+          <FeeDecisionFramework />
         </Section>
 
-        {/* SECTION 14 — FAQs */}
+        {/* SECTION 14 — author */}
+        <Section id="author">
+          <H2>About the Author</H2>
+          <AuthorProfile />
+          <H3>Methodology and correction policy</H3>
+          <p>
+            The publication method for this guide is to collect fees from public pricing pages or
+            fee sheets, retain a verification date, and mark information that is not publicly
+            available rather than substituting a sales-call quote. EMI, refund and deferral terms
+            require review against their source documents. Cost calculations use only stated inputs;
+            scenarios are labelled illustrative and are not predictions.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Corrections: [INSERT: contact email]. Fees, programs and offers change frequently; re-check
+            every figure before publication and on the quarterly review cycle.
+          </p>
+        </Section>
+
+        {/* SECTION 15 — reviewers */}
+        <Section id="expert-reviewers">
+          <H2>Expert Reviewers</H2>
+          <ReviewerCarousel />
+        </Section>
+
+        {/* SECTION 16 — FAQs */}
         <Section id="faqs">
-          <H2>AI Course Fees in India — 40 Frequently Asked Questions</H2>
-          <p>Grouped by theme. Every unverified figure is marked rather than guessed.</p>
+          <H2>Frequently Asked Questions — AI Course Fees, Duration, Eligibility &amp; Careers</H2>
+          <p>Thirty-six direct answers, grouped by the decision you are trying to make. Unverified figures remain explicitly marked.</p>
           <Faq groups={faqGroups} />
         </Section>
 
-        {/* SECTION 15 — author */}
-        <Section id="author">
-          <H2>Author, Reviewers &amp; Methodology</H2>
-          <H3>How this guide was built</H3>
-          <p>
-            Fees were collected from each provider&apos;s public pricing page or published fee sheet
-            on {LAST_UPDATED} and recorded with the date of reading. Where a fee is disclosed only
-            on a sales call, the entry says so rather than reproducing a figure reported second-hand.
-            EMI, refund and deferral terms were read from published policy pages; where a provider
-            does not publish them, the cell is marked [VERIFY]. Cost-per-month and cost-per-hour
-            figures are computed only from published fees and published hours, and illustrative
-            calculations are labelled as such. Salary ranges require a cited public source before
-            publication and are marked until that source is attached.
-          </p>
-          <H3>Author</H3>
-          <p>
-            <strong>[INSERT: author name]</strong> — [INSERT: role], writing on AI education
-            economics and hiring in India. Areas of focus: AI/ML curriculum design, EdTech pricing
-            and lending structures, and technical hiring for applied AI roles.{" "}
-            <strong>[INSERT: brief credential summary and profile link]</strong>
-          </p>
-          <H3>Expert reviewers</H3>
-          <ul>
-            <li>
-              <strong>[INSERT: reviewer 1 name, role]</strong> — reviewed curriculum scope and role
-              mappings [INSERT: review date].
-            </li>
-            <li>
-              <strong>[INSERT: reviewer 2 name, role]</strong> — reviewed hiring, interview and
-              salary sections [INSERT: review date].
-            </li>
-            <li>
-              <strong>[INSERT: reviewer 3 name, role]</strong> — reviewed EMI, tax and refund
-              explanations [INSERT: review date].
-            </li>
-          </ul>
-          <p className="text-sm text-muted-foreground">
-            Corrections: if a fee or policy on this page is out of date, write to [INSERT: contact
-            email] and it will be updated with a revised verification date.
-          </p>
-        </Section>
-
-        {/* SECTION 16 — final guide */}
+        {/* SECTION 17 — final guide */}
         <Section id="final-guide">
-          <H2>Final Decision Guide — Which Fee Band Should You Choose?</H2>
+          <H2>Final Decision Guide — Choosing the Right AI Course Fee Band in 2026</H2>
           <p>
-            Start from the constraint, not the catalogue. Ask which of the five things a fee buys you
-            genuinely cannot supply yourself.
+            The fee spectrum begins at ₹0 for NPTEL, open courses and MOOC audits; moves through
+            ₹5,000–₹40,000 for budget certificates and entry cohorts; reaches ₹40,000–₹1,20,000 for
+            specialist live programs; and rises to ₹1,20,000–₹3,50,000 for university credentials or
+            ₹2,50,000–₹5,00,000+ for intensive placement infrastructure and executive branding. These
+            bands describe what is commonly being bought, not quality ranks. A free course can contain
+            exceptional material, and a premium course can be rational when a credential or interview
+            pipeline is the actual requirement.
           </p>
-          <ul>
-            <li>
-              <strong>You need content only, and you finish what you start.</strong> Spend ₹0.
-              NPTEL, fast.ai, Hugging Face and DeepLearning.AI will take you further than most paid
-              programmes if you actually complete them.
-            </li>
-            <li>
-              <strong>You need structure but have little money.</strong> ₹5,000–₹40,000. A cohort,
-              a sequence and a community, with the finishing still mostly on you.
-            </li>
-            <li>
-              <strong>You need feedback, structure and interview readiness, and you are switching
-              careers or levelling up.</strong> ₹40,000–₹1,20,000. This is the best
-              capability-per-rupee band in the market in 2026, and the LogicMojo AI &amp; ML Course
-              sits here at ₹87,000, or ₹73,950 under the current offer.
-            </li>
-            <li>
-              <strong>You need a credential for HR, a promotion or reimbursement.</strong>{" "}
-              ₹1,20,000–₹3,50,000. Buy the name deliberately, and use every live session you are
-              entitled to.
-            </li>
-            <li>
-              <strong>Your bottleneck is interview volume, not skill.</strong> ₹2,50,000+ with real
-              placement operations — and ask for outcome numbers with a denominator first.
-            </li>
-            <li>
-              <strong>You need AI literacy to lead, not to build.</strong> A short executive or
-              literacy programme. Do not buy an engineering track you will not use.
-            </li>
-          </ul>
+          <div className="decision-rule" aria-label="Three-line AI course decision rule">
+            <div><span>Goal</span><strong>Define the career or capability change</strong></div>
+            <div><span>Fee band</span><strong>Pay only for the missing support</strong></div>
+            <div><span>Format</span><strong>Choose the structure you will finish</strong></div>
+          </div>
           <p>
-            Whatever band you choose, protect the 60% that the fee does not cover: block the weekly
-            hours in your calendar before you pay, publish your projects as you build them, and plan
-            three months of applications after the final class. That is what turns a fee into a
-            career change — and it is the one part nobody can sell you.
+            The core insight is simple: content is nearly free. A paid fee buys structure, feedback,
+            credential value and career support. Buy only the elements you cannot reliably provide
+            yourself. A well-priced course you abandon has poor ROI; a modest course completed with
+            original projects can create far more value. Completion probability therefore matters
+            more than the headline discount.
+          </p>
+          <p>
+            Your next action is concrete: calculate real cost with the formula above, run every item
+            in the 15-point checklist, and ask the provider to confirm fees, tax, finance, refunds,
+            instructor, syllabus and career services in writing. Do not pay while any answer that
+            affects total cost or completion remains verbal.
           </p>
           <div className="mt-8 rounded-lg border border-primary bg-accent p-6 shadow-lift sm:p-8">
-            <h3 className="text-lg font-semibold text-foreground">
-              LogicMojo AI &amp; ML Course — ₹87,000 · ₹73,950 for the first 15 enrolments
-            </h3>
-            <p className="mt-2 text-[0.95rem] text-foreground/90">
-              Live online cohort, full-stack AI/ML curriculum from Python through LLMs, RAG, agents
-              and MLOps, projects with mentor review, interview preparation and job assistance.
-              Confirm the current fee, batch schedule, EMI terms and refund policy on the course
-              page before enrolling.
-            </p>
-            <a
-              href="https://logicmojo.com"
-              className="mt-4 inline-flex items-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              View course fee, curriculum and batch schedule →
-            </a>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Specialist live cohort</p>
+            <h3 className="mt-3 text-xl font-semibold text-foreground">LogicMojo AI &amp; ML Course — ₹87,000 · ₹73,950 for the first 15 enrolments</h3>
+            <p className="mt-3 text-[0.95rem] text-foreground/90">Review the curriculum, upcoming batches and projects, then confirm the offer, GST treatment, EMI, duration, inclusions and refund policy before enrolling.</p>
+            <a href="https://logicmojo.com" rel="sponsored" className="mt-5 inline-flex items-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">Explore the LogicMojo AI &amp; ML Course — Curriculum, Batches &amp; Projects →</a>
           </div>
         </Section>
       </div>
 
       <footer className="mt-20 border-t border-border bg-card">
-        <div className="mx-auto max-w-6xl px-5 py-12 text-sm text-muted-foreground">
-          <p className="font-display text-base font-bold text-foreground">LogicMojo</p>
-          <p className="mt-2 max-w-2xl">
-            LogicMojo offers the AI &amp; ML Course featured on this page. All other programme
-            details are taken from public sources on {LAST_UPDATED} and are marked where a provider
-            does not publish them. Fees, offers and policies change — confirm current terms with each
-            provider before paying.
-          </p>
-          <p className="mt-4">© {new Date().getFullYear()} LogicMojo. All rights reserved.</p>
+        <div className="mx-auto max-w-6xl px-5 py-12">
+          <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+            <div><div className="inline-flex rounded-md border border-dashed border-primary px-4 py-3 font-display font-bold text-foreground">Logo placeholder · LogicMojo</div><p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">Applied AI learning for professionals building current, demonstrable engineering capability.</p></div>
+            <div><h2 className="text-sm font-bold uppercase tracking-[0.14em] text-foreground">Courses</h2><p className="mt-4 text-sm leading-7 text-muted-foreground">AI &amp; ML Course · GenAI Course · Data Science Course · DSA &amp; System Design <strong>[INSERT LINKS]</strong></p></div>
+            <div><h2 className="text-sm font-bold uppercase tracking-[0.14em] text-foreground">Resources</h2><p className="mt-4 text-sm leading-7 text-muted-foreground">Curriculum PDF · Batch Schedule · Fee &amp; EMI Details · Project Portfolio · Blog · FAQs <strong>[INSERT LINKS]</strong></p></div>
+          </div>
+          <div className="mt-10 grid gap-6 border-t border-border pt-8 text-sm text-muted-foreground sm:grid-cols-3"><p><strong className="text-foreground">Contact</strong><br />[EMAIL] · [PHONE] · [WHATSAPP]</p><p><strong className="text-foreground">Social</strong><br />LinkedIn · YouTube · Instagram · X · GitHub [INSERT LINKS]</p><p><strong className="text-foreground">Legal</strong><br />Privacy Policy · Terms · Refund Policy [INSERT LINKS]</p></div>
+          <p className="mt-8 text-xs text-muted-foreground">© {new Date().getFullYear()} LogicMojo. Fees and offers require re-verification before publication.</p>
         </div>
       </footer>
+      <a href="#logicmojo" className="mobile-course-cta">Explore LogicMojo · ₹73,950 offer</a>
     </main>
   );
 }
