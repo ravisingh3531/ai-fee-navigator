@@ -1532,7 +1532,35 @@ function FeesGuide() {
           </Note>
         </Section>
 
+        {/* SECTION 12B — calculator */}
+        <Section id="calculator">
+          <H2>AI Course Fee &amp; ROI Calculator</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            Enter your own four numbers — fee, duration, current salary and the salary you are
+            targeting — and see the total investment, break-even point and three-year net position.
+            Everything is arithmetic on your inputs. Nothing here predicts a hike or an offer.
+          </p>
+          <FeeRoiCalculator />
+          <p className="mt-4 text-sm text-muted-foreground">
+            Use a target salary you have actually seen in current job posts for the role you want, not
+            an aspirational figure. Then divide the result by your honest chance of finishing.
+          </p>
+        </Section>
+
+        {/* SECTION 12C — quiz */}
+        <Section id="course-quiz">
+          <H2>AI Course Recommendation Quiz</H2>
+          <p className="max-w-4xl text-lg leading-relaxed">
+            Eight questions about your experience, background, goal, budget, placement needs,
+            preferred mode, weekly time and whether you need Python and ML foundations built from
+            scratch. The result appears in a pop-up with the fee, duration, why it fits, key modules
+            and placement support.
+          </p>
+          <CourseRecommendationQuiz />
+        </Section>
+
         {/* SECTION 13 — fee-first framework */}
+
         <Section id="checklist">
           <H2>How to Choose an AI Course in 2026 — Fee-First Decision Framework</H2>
           <p className="max-w-4xl text-lg leading-relaxed">
